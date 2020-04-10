@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		570876AB243DC5830039D972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570876AA243DC5830039D972 /* AppDelegate.swift */; };
+		570876AD243DC5830039D972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570876AC243DC5830039D972 /* SceneDelegate.swift */; };
+		570876AF243DC5830039D972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570876AE243DC5830039D972 /* ViewController.swift */; };
+		570876B2243DC5830039D972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570876B0243DC5830039D972 /* Main.storyboard */; };
+		570876B4243DC5860039D972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570876B3243DC5860039D972 /* Assets.xcassets */; };
+		570876B7243DC5860039D972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570876B5243DC5860039D972 /* LaunchScreen.storyboard */; };
+		570876C2243DC5860039D972 /* TestFont01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570876C1243DC5860039D972 /* TestFont01Tests.swift */; };
+		570876CD243DC5860039D972 /* TestFont01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570876CC243DC5860039D972 /* TestFont01UITests.swift */; };
+		768528C39582460D7D896F90 /* Pods_TestFont01.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B4CFD810AD43E47B123026 /* Pods_TestFont01.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		570876BE243DC5860039D972 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5708769F243DC5830039D972 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 570876A6243DC5830039D972;
+			remoteInfo = TestFont01;
+		};
+		570876C9243DC5860039D972 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5708769F243DC5830039D972 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 570876A6243DC5830039D972;
+			remoteInfo = TestFont01;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1582699203C5DC8D32C8E3D4 /* Pods-TestFont01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFont01.release.xcconfig"; path = "Target Support Files/Pods-TestFont01/Pods-TestFont01.release.xcconfig"; sourceTree = "<group>"; };
+		2A5C4FC3F2D5D9CBD57263B9 /* Pods-TestFont01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFont01.debug.xcconfig"; path = "Target Support Files/Pods-TestFont01/Pods-TestFont01.debug.xcconfig"; sourceTree = "<group>"; };
+		36B4CFD810AD43E47B123026 /* Pods_TestFont01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFont01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		570876A7243DC5830039D972 /* TestFont01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFont01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		570876AA243DC5830039D972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		570876AC243DC5830039D972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		570876AE243DC5830039D972 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		570876B1243DC5830039D972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		570876B3243DC5860039D972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		570876B6243DC5860039D972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		570876B8243DC5860039D972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		570876BD243DC5860039D972 /* TestFont01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFont01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		570876C1243DC5860039D972 /* TestFont01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFont01Tests.swift; sourceTree = "<group>"; };
+		570876C3243DC5860039D972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		570876C8243DC5860039D972 /* TestFont01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFont01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		570876CC243DC5860039D972 /* TestFont01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFont01UITests.swift; sourceTree = "<group>"; };
+		570876CE243DC5860039D972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		570876A4243DC5830039D972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768528C39582460D7D896F90 /* Pods_TestFont01.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570876BA243DC5860039D972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570876C5243DC5860039D972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		448270969AC673BE52A3CFA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A5C4FC3F2D5D9CBD57263B9 /* Pods-TestFont01.debug.xcconfig */,
+				1582699203C5DC8D32C8E3D4 /* Pods-TestFont01.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5708769E243DC5830039D972 = {
+			isa = PBXGroup;
+			children = (
+				570876A9243DC5830039D972 /* TestFont01 */,
+				570876C0243DC5860039D972 /* TestFont01Tests */,
+				570876CB243DC5860039D972 /* TestFont01UITests */,
+				570876A8243DC5830039D972 /* Products */,
+				448270969AC673BE52A3CFA1 /* Pods */,
+				F9AACE1C1DCA386E782FFEB3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		570876A8243DC5830039D972 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				570876A7243DC5830039D972 /* TestFont01.app */,
+				570876BD243DC5860039D972 /* TestFont01Tests.xctest */,
+				570876C8243DC5860039D972 /* TestFont01UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		570876A9243DC5830039D972 /* TestFont01 */ = {
+			isa = PBXGroup;
+			children = (
+				570876AA243DC5830039D972 /* AppDelegate.swift */,
+				570876AC243DC5830039D972 /* SceneDelegate.swift */,
+				570876AE243DC5830039D972 /* ViewController.swift */,
+				570876B0243DC5830039D972 /* Main.storyboard */,
+				570876B3243DC5860039D972 /* Assets.xcassets */,
+				570876B5243DC5860039D972 /* LaunchScreen.storyboard */,
+				570876B8243DC5860039D972 /* Info.plist */,
+			);
+			path = TestFont01;
+			sourceTree = "<group>";
+		};
+		570876C0243DC5860039D972 /* TestFont01Tests */ = {
+			isa = PBXGroup;
+			children = (
+				570876C1243DC5860039D972 /* TestFont01Tests.swift */,
+				570876C3243DC5860039D972 /* Info.plist */,
+			);
+			path = TestFont01Tests;
+			sourceTree = "<group>";
+		};
+		570876CB243DC5860039D972 /* TestFont01UITests */ = {
+			isa = PBXGroup;
+			children = (
+				570876CC243DC5860039D972 /* TestFont01UITests.swift */,
+				570876CE243DC5860039D972 /* Info.plist */,
+			);
+			path = TestFont01UITests;
+			sourceTree = "<group>";
+		};
+		F9AACE1C1DCA386E782FFEB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36B4CFD810AD43E47B123026 /* Pods_TestFont01.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		570876A6243DC5830039D972 /* TestFont01 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 570876D1243DC5860039D972 /* Build configuration list for PBXNativeTarget "TestFont01" */;
+			buildPhases = (
+				3DA183EACC91E8294F02F280 /* [CP] Check Pods Manifest.lock */,
+				570876A3243DC5830039D972 /* Sources */,
+				570876A4243DC5830039D972 /* Frameworks */,
+				570876A5243DC5830039D972 /* Resources */,
+				EF55E0A470DD6662F383C492 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestFont01;
+			productName = TestFont01;
+			productReference = 570876A7243DC5830039D972 /* TestFont01.app */;
+			productType = "com.apple.product-type.application";
+		};
+		570876BC243DC5860039D972 /* TestFont01Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 570876D4243DC5860039D972 /* Build configuration list for PBXNativeTarget "TestFont01Tests" */;
+			buildPhases = (
+				570876B9243DC5860039D972 /* Sources */,
+				570876BA243DC5860039D972 /* Frameworks */,
+				570876BB243DC5860039D972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				570876BF243DC5860039D972 /* PBXTargetDependency */,
+			);
+			name = TestFont01Tests;
+			productName = TestFont01Tests;
+			productReference = 570876BD243DC5860039D972 /* TestFont01Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		570876C7243DC5860039D972 /* TestFont01UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 570876D7243DC5860039D972 /* Build configuration list for PBXNativeTarget "TestFont01UITests" */;
+			buildPhases = (
+				570876C4243DC5860039D972 /* Sources */,
+				570876C5243DC5860039D972 /* Frameworks */,
+				570876C6243DC5860039D972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				570876CA243DC5860039D972 /* PBXTargetDependency */,
+			);
+			name = TestFont01UITests;
+			productName = TestFont01UITests;
+			productReference = 570876C8243DC5860039D972 /* TestFont01UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5708769F243DC5830039D972 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = MinJing_Lin;
+				TargetAttributes = {
+					570876A6243DC5830039D972 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					570876BC243DC5860039D972 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 570876A6243DC5830039D972;
+					};
+					570876C7243DC5860039D972 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 570876A6243DC5830039D972;
+					};
+				};
+			};
+			buildConfigurationList = 570876A2243DC5830039D972 /* Build configuration list for PBXProject "TestFont01" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5708769E243DC5830039D972;
+			productRefGroup = 570876A8243DC5830039D972 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				570876A6243DC5830039D972 /* TestFont01 */,
+				570876BC243DC5860039D972 /* TestFont01Tests */,
+				570876C7243DC5860039D972 /* TestFont01UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		570876A5243DC5830039D972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570876B7243DC5860039D972 /* LaunchScreen.storyboard in Resources */,
+				570876B4243DC5860039D972 /* Assets.xcassets in Resources */,
+				570876B2243DC5830039D972 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570876BB243DC5860039D972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570876C6243DC5860039D972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DA183EACC91E8294F02F280 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFont01-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF55E0A470DD6662F383C492 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFont01/Pods-TestFont01-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFont01/Pods-TestFont01-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFont01/Pods-TestFont01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		570876A3243DC5830039D972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570876AF243DC5830039D972 /* ViewController.swift in Sources */,
+				570876AB243DC5830039D972 /* AppDelegate.swift in Sources */,
+				570876AD243DC5830039D972 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570876B9243DC5860039D972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570876C2243DC5860039D972 /* TestFont01Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570876C4243DC5860039D972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570876CD243DC5860039D972 /* TestFont01UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		570876BF243DC5860039D972 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 570876A6243DC5830039D972 /* TestFont01 */;
+			targetProxy = 570876BE243DC5860039D972 /* PBXContainerItemProxy */;
+		};
+		570876CA243DC5860039D972 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 570876A6243DC5830039D972 /* TestFont01 */;
+			targetProxy = 570876C9243DC5860039D972 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		570876B0243DC5830039D972 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				570876B1243DC5830039D972 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		570876B5243DC5860039D972 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				570876B6243DC5860039D972 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		570876CF243DC5860039D972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		570876D0243DC5860039D972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		570876D2243DC5860039D972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5C4FC3F2D5D9CBD57263B9 /* Pods-TestFont01.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestFont01/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MinJing-Lin.TestFont01";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		570876D3243DC5860039D972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1582699203C5DC8D32C8E3D4 /* Pods-TestFont01.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestFont01/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MinJing-Lin.TestFont01";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		570876D5243DC5860039D972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestFont01Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MinJing-Lin.TestFont01Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestFont01.app/TestFont01";
+			};
+			name = Debug;
+		};
+		570876D6243DC5860039D972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestFont01Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MinJing-Lin.TestFont01Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestFont01.app/TestFont01";
+			};
+			name = Release;
+		};
+		570876D8243DC5860039D972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestFont01UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MinJing-Lin.TestFont01UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestFont01;
+			};
+			name = Debug;
+		};
+		570876D9243DC5860039D972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestFont01UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MinJing-Lin.TestFont01UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestFont01;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		570876A2243DC5830039D972 /* Build configuration list for PBXProject "TestFont01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570876CF243DC5860039D972 /* Debug */,
+				570876D0243DC5860039D972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		570876D1243DC5860039D972 /* Build configuration list for PBXNativeTarget "TestFont01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570876D2243DC5860039D972 /* Debug */,
+				570876D3243DC5860039D972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		570876D4243DC5860039D972 /* Build configuration list for PBXNativeTarget "TestFont01Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570876D5243DC5860039D972 /* Debug */,
+				570876D6243DC5860039D972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		570876D7243DC5860039D972 /* Build configuration list for PBXNativeTarget "TestFont01UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570876D8243DC5860039D972 /* Debug */,
+				570876D9243DC5860039D972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5708769F243DC5830039D972 /* Project object */;
+}
