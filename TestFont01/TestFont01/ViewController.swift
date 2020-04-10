@@ -19,12 +19,20 @@ class ViewController: UIViewController {
         
         printAllFontNames()
         
+        let imageView = UIImageView(image: UIImage(named: "icon"))
+        self.view.addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.size.equalTo(80)
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(100)
+        }
+        
         label.text = "Hello World"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 30)
         self.view.addSubview(label)
         label.snp.makeConstraints { (make) in
-            make.top.equalTo(200)
+            make.top.equalTo(imageView.snp.bottom).offset(40)
             make.centerX.equalTo(self.view)
         }
     
@@ -34,18 +42,23 @@ class ViewController: UIViewController {
         changeBtn.addTarget(self, action: #selector(changeFont), for: .touchUpInside)
         self.view.addSubview(changeBtn)
         changeBtn.snp.makeConstraints { (make) in
-            make.top.equalTo(label).offset(100)
+            make.top.equalTo(imageView.snp_bottomMargin).offset(120)
             make.centerX.equalTo(self.view)
             make.width.equalTo(100)
         }
         
     }
 
+    // 摇晃手势
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        changeFont()
+    }
     
     @objc func changeFont() {
-        let count:Int = fontNameArr.count
-        let number:Int = Int(arc4random()) % count
-        label.font = UIFont(name: fontNameArr[number], size: 30)
+        let count:Int = fontNameArr.count - 1
+        let ran = Int.random(in: 0...count)
+//        let ran:Int = Int(arc4random()) % count
+        label.font = UIFont(name: fontNameArr[ran], size: 30)
     }
     
     func printAllFontNames() {
@@ -60,4 +73,5 @@ class ViewController: UIViewController {
     }
 
 }
+
 
