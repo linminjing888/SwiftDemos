@@ -55,9 +55,11 @@ class ViewController: UIViewController,UITextViewDelegate {
             currentCount =  20
             if let str = textView.text {
                 // 截取字段
-                let startIdx = str.startIndex
-                let index = str.index(startIdx, offsetBy: 20)
-                textView.text = String(textView.text.prefix(upTo: index))
+//                let startIdx = str.startIndex
+//                let index = str.index(startIdx, offsetBy: 20)
+//                textView.text = String(textView.text.prefix(upTo: index))
+                
+                textView.text = String(str.prefix(20))
                 
                 inputTextView.resignFirstResponder()
             }
@@ -73,3 +75,23 @@ class ViewController: UIViewController,UITextViewDelegate {
     }
 }
 
+
+/**
+ // 头部截取
+ let str = "asdfghjkl;'"
+ let str1 = str.prefix(2);
+ print(str1)
+ // 结果: as
+   
+ // 尾部截取
+ let str2 = str.suffix(3);
+ print(str2)
+ // 结果: l;'
+
+ // range 截取
+ let index3 = str.index(str.startIndex, offsetBy: 3)
+ let index4 = str.index(str.startIndex, offsetBy: 5)
+ let str5 = str[index3...index4]
+ print(str5)
+ // 结果:fgh
+ */
