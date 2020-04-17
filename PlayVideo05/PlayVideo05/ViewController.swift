@@ -12,6 +12,8 @@ import AVKit
 
 class ViewController: UIViewController {
 
+    var audioPlayer:AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -22,6 +24,21 @@ class ViewController: UIViewController {
         openBtn.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
         self.view.addSubview(openBtn)
         
+        let playAudioBtn = UIButton(type: .custom)
+        playAudioBtn.setTitle("PlayAudio", for: .normal)
+        playAudioBtn.frame = CGRect(x: 100, y: 200, width: 100, height: 40)
+        playAudioBtn.backgroundColor = .cyan
+        playAudioBtn.addTarget(self, action: #selector(playAudio), for: .touchUpInside)
+        self.view.addSubview(playAudioBtn)
+        
+        let pauseAudioBtn = UIButton(type: .custom)
+        pauseAudioBtn.setTitle("PauseAudio", for: .normal)
+        pauseAudioBtn.frame = CGRect(x: 100, y: 300, width: 100, height: 40)
+        pauseAudioBtn.backgroundColor = .cyan
+        pauseAudioBtn.addTarget(self, action: #selector(pauseAudio), for: .touchUpInside)
+        self.view.addSubview(pauseAudioBtn)
+        
+        initAudio()
     }
     
     @objc func playVideo() {
@@ -37,7 +54,31 @@ class ViewController: UIViewController {
         }
         
     }
-
-
+    
+    func initAudio() {
+        let audioPath = Bundle.main.path(forResource: "live", ofType: "mp3")
+        let audioUrl = URL(fileURLWithPath: audioPath!)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: audioUrl)
+        } catch {
+            audioPlayer = nil
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playAndRecord)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("error")
+        }
+    }
+    
+    @objc func playAudio() {
+        audioPlayer?.play()
+    }
+    
+    @objc func pauseAudio() {
+        audioPlayer?.pause()
+    }
+    
 }
 
