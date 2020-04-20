@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 import SnapKit
 
-class ViewController: UIViewController,CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
     var locationManager = CLLocationManager()
     // 城市名
@@ -83,7 +83,65 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             make.centerX.equalToSuperview()
         }
     }
+    
+    func loadWeather(city:String) {
+        let paras:[String : Any] = ["key":"osoydf7ademn8ybv",
+                                    "location":city,
+                                    "language":"zh-Hans",
+                                    "start":0,
+                                    "days":1]
+        
+        AF.request("https://api.thinkpage.cn/v3/weather/daily.json",
+                   method: .get,
+                   parameters: paras).responseJSON { (response) in
+                    
+                       switch(response.result) {
+                       case .success(let value):
+                        let json = JSON(value)
+                        print(json)
+                        
+                        self.updateData(json: json)
+                    
+                        case .failure(let error):
+                            print("Error message:\(error)")
+                            break
+                        }
+                    }
+        
+    }
+    
+    func updateData(json:JSON) {
+        let weather = Weather()
+        
+        let cityName = json["results"][0]["location"]["name"].stringValue
+        weather.cityName = cityName
+        
+        let iconCode = json["results"][0]["daily"][0]["code_day"].stringValue
+        weather.code_day = iconCode
+        
+        let wea = json["results"][0]["daily"][0]["text_day"].stringValue
+        weather.text_day = wea
+        
+        let low = json["results"][0]["daily"][0]["low"]
+        let height = json["results"][0]["daily"][0]["high"]
+        weather.temperature = "\(height)°C / \(low)°C"
+        
+        self.updateWeatherUI(model: weather)
 
+    }
+    
+    func updateWeatherUI(model:Weather) {
+        self.cityLabel.text = model.cityName
+        self.weaLabel.text = model.text_day
+        self.weaIcon.image = UIImage(named: "\(model.code_day)")
+        self.temLabel.text = model.temperature
+    }
+    
+}
+
+
+extension ViewController:CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location:CLLocation = locations[0]
         if location.horizontalAccuracy > 0 {
@@ -103,77 +161,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 //        locationManager.stopUpdatingLocation()
     }
     
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("获取位置失败 \(error)")
     }
     
-    func loadWeather(city:String) {
-        let paras:[String : Any] = ["key":"osoydf7ademn8ybv",
-                                    "location":city,
-                                    "language":"zh-Hans",
-                                    "start":0,
-                                    "days":1]
-        
-        AF.request("https://api.thinkpage.cn/v3/weather/daily.json",
-                   method: .get,
-                   parameters: paras).responseJSON { (response) in
-                    
-                       switch(response.result) {
-                       case .success(let value):
-                        let json = JSON(value)
-                        print(json)
-                        
-                        let weather = Weather()
-                        
-                        let cityName = json["results"][0]["location"]["name"].stringValue
-                        weather.cityName = cityName
-                        
-                        let iconCode = json["results"][0]["daily"][0]["code_day"].stringValue
-                        weather.code_day = iconCode
-                        
-                        let wea = json["results"][0]["daily"][0]["text_day"].stringValue
-                        weather.text_day = wea
-                        
-                        let low = json["results"][0]["daily"][0]["low"]
-                        let height = json["results"][0]["daily"][0]["high"]
-                        weather.temperature = "\(height)°C / \(low)°C"
-                        
-                        
-                        self.cityLabel.text = weather.cityName
-                        self.weaLabel.text = weather.text_day
-                        self.weaIcon.image = UIImage(named: "\(weather.code_day)")
-                        self.temLabel.text = weather.temperature
-
-                        case .failure(let error):
-                            print("Error message:\(error)")
-                            break
-                        }
-                    }
-        
-    }
-    
-    
-    /**
-         NSArray *resultArray = responseObject[@"results"];
-         for (NSDictionary *dic in resultArray) {
-             
-             WeatherModel *model = [[WeatherModel alloc]init];
-             model.cityName = dic[@"location"][@"name"];
-             model.todayDic = (NSDictionary *)[dic[@"daily"] objectAtIndex:0];
-             model.tomorrowDic = (NSDictionary *)[dic[@"daily"] objectAtIndex:1];
-             model.afterTomorrowDic = (NSDictionary *)[dic[@"daily"] objectAtIndex:2];
-             
-             self.weatherV.model = model;
-             
-             [self addAnimationWithType:[dic[@"daily"] objectAtIndex:0][@"code_day"]];
-         }
-         
-         
-         
-     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         
-     }];
-     */
 }
-
