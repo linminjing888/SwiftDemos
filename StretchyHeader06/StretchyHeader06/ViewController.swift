@@ -36,7 +36,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         bannerImgView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: bannerH)
         self.view.addSubview(bannerImgView)
         
-        self.dataArr = lyric.split(separator: ",").map(String.init)
+//        self.dataArr = lyric.split(separator: ",").map(String.init)
+        // map 简单说就是数组中每个元素通过某个方法进行转换，最后返回一个新的数组。
+        self.dataArr = lyric.split(separator: ",").map({ $0 + "--" })
+        
+//        self.dataArr = lyric.split(separator: ",").map({ abc in
+//            return abc + "--"
+//        })
+        
+        // flatMap 方法同 map 方法比较类似，只不过它返回后的数组中不存在 nil（自动把 nil 给剔除掉）
+        // 还能把数组中存有数组的数组（二维数组、N维数组）一同打开变成一个新的数组。
     }
 
     
