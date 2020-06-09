@@ -37,7 +37,8 @@ class CustomPopTransition: NSObject,UIViewControllerAnimatedTransitioning {
             snapshotView?.removeFromSuperview()
             fromVC.bannerImgVi.isHidden = false
             
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+           transitionContext.completeTransition(true)
+//            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }
     

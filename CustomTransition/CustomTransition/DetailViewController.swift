@@ -34,10 +34,9 @@ class DetailViewController: UIViewController {
         
         self.navigationController?.delegate = self
         
-        // 手势返回有bug
-//        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(edgePanGestureAction(edgePan:)))
-//        edgePanGesture.edges = UIRectEdge.left
-//        self.view.addGestureRecognizer(edgePanGesture)
+        let edgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(edgePanGestureAction(edgePan:)))
+        edgePanGesture.edges = UIRectEdge.left
+        self.view.addGestureRecognizer(edgePanGesture)
         
     }
     
@@ -56,11 +55,15 @@ class DetailViewController: UIViewController {
         } else if edgePan.state == UIGestureRecognizer.State.changed {
             self.percentDrivenTransition?.update(progress)
         } else if edgePan.state == UIGestureRecognizer.State.cancelled || edgePan.state == UIGestureRecognizer.State.ended {
-            if progress > 0.5 {
-                self.percentDrivenTransition?.finish()
-            } else {
-                self.percentDrivenTransition?.cancel()
-            }
+            
+            // 加上这句判断，会有bug
+//            if progress > 0.5 {
+//                self.percentDrivenTransition?.finish()
+//            } else {
+//                self.percentDrivenTransition?.cancel()
+//            }
+            
+            self.percentDrivenTransition?.finish()
             self.percentDrivenTransition = nil
         }
     }
