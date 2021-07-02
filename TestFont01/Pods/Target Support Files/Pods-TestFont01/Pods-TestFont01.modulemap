@@ -1,6 +1,0 @@
-framework module Pods_TestFont01 {
-  umbrella header "Pods-TestFont01-umbrella.h"
-
-  export *
-  module * { export * }
-}
