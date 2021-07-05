@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StretchyViewController: MJBaseViewController {
+class MJStretchyViewController: MJBaseViewController {
 
     var tableView: UITableView!
     var bannerImgVi: UIImageView!
@@ -50,7 +50,7 @@ class StretchyViewController: MJBaseViewController {
 }
 
 
-extension StretchyViewController: UITableViewDelegate,UITableViewDataSource {
+extension MJStretchyViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.dataArray.count
     }

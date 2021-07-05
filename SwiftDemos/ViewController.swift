@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.white
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker"]
         
         setupUI()
     }
@@ -57,6 +57,8 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
             let vc = MJFontViewController()
             self.navigationController?.pushViewController(vc, animated: true)
@@ -70,7 +72,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
             let vc = MJAudioViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }  else if indexPath.row == 4 {
-            let vc = StretchyViewController()
+            let vc = MJStretchyViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }  else if indexPath.row == 5 {
+            let vc = MJPickerViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
