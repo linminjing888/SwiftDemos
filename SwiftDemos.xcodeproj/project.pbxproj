@@ -204,6 +204,7 @@
 				8EAB1372268EB0EC00DEB5B1 /* MJBaseViewController.swift */,
 				8EAB132D268EAA9E00DEB5B1 /* ViewController.swift */,
 				8EAB135F268EABDB00DEB5B1 /* MJMacro.swift */,
+				8EC3170F26929B2F00DE462C /* Views */,
 				8EAB1369268EB06000DEB5B1 /* ViewControllers */,
 				8EAB138E268EB73300DEB5B1 /* Models */,
 				8EAB132F268EAA9E00DEB5B1 /* Main.storyboard */,
@@ -298,6 +299,13 @@
 				8EAB13C3268EDE4000DEB5B1 /* 0.png */,
 			);
 			path = "天气现象图标";
+			sourceTree = "<group>";
+		};
+		8EC3170F26929B2F00DE462C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AF7FAFA1E6F7777C41C5C5C1 /* Pods */ = {

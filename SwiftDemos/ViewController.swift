@@ -31,8 +31,10 @@ class ViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.tableFooterView = UIView()
         view.addSubview(tableView!)
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
     }
-    
 
 }
 
