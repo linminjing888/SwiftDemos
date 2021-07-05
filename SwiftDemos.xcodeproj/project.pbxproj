@@ -63,6 +63,7 @@
 		8EAB13F6268EE0C700DEB5B1 /* MJTextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB13F5268EE0C700DEB5B1 /* MJTextInputViewController.swift */; };
 		8EAB1402268EEDD800DEB5B1 /* MJAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1401268EEDD800DEB5B1 /* MJAudioViewController.swift */; };
 		8EAB1407268EEF3600DEB5B1 /* live.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB1406268EEF3500DEB5B1 /* live.mp3 */; };
+		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		8EAB13F5268EE0C700DEB5B1 /* MJTextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJTextInputViewController.swift; sourceTree = "<group>"; };
 		8EAB1401268EEDD800DEB5B1 /* MJAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJAudioViewController.swift; sourceTree = "<group>"; };
 		8EAB1406268EEF3500DEB5B1 /* live.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = live.mp3; sourceTree = "<group>"; };
+		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				8EAB1384268EB69D00DEB5B1 /* MJWeatherViewController.swift */,
 				8EAB13F5268EE0C700DEB5B1 /* MJTextInputViewController.swift */,
 				8EAB1401268EEDD800DEB5B1 /* MJAudioViewController.swift */,
+				8EC3171B2692B3B100DE462C /* StretchyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				8EAB13F6268EE0C700DEB5B1 /* MJTextInputViewController.swift in Sources */,
 				8EAB1402268EEDD800DEB5B1 /* MJAudioViewController.swift in Sources */,
 				8EAB136B268EB08F00DEB5B1 /* MJFontViewController.swift in Sources */,
+				8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

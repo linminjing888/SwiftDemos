@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.white
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy"]
         
         setupUI()
     }
@@ -31,8 +31,6 @@ class ViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.tableFooterView = UIView()
         view.addSubview(tableView!)
-        
-        self.navigationController?.navigationBar.isHidden = true
         
     }
 
@@ -70,6 +68,9 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 3 {
             let vc = MJAudioViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }  else if indexPath.row == 4 {
+            let vc = StretchyViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
