@@ -10,5 +10,8 @@ target 'SwiftDemos' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Alamofire', '~> 5.4'
   pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 6.2.0'
+  pod 'MJRefresh', '~> 3.5.0'
+  pod 'HandyJSON', '~> 5.0.2'
   
 end

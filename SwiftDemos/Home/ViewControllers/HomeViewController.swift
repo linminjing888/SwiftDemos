@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: MJBaseViewController {
 
-    var tableView: UITableView?
+    var tableView: UITableView!
     var dataArray: Array<String>!
     
     override func viewDidLoad() {
@@ -26,17 +26,17 @@ class ViewController: UIViewController {
     fileprivate func setupUI() {
         
         tableView = UITableView(frame: self.view.bounds, style: .plain)
-        tableView?.backgroundColor = UIColor.white
-        tableView?.delegate = self
-        tableView?.dataSource = self
-        tableView?.tableFooterView = UIView()
-        view.addSubview(tableView!)
+        tableView.backgroundColor = UIColor.white
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        view.addSubview(tableView)
         
     }
 
 }
 
-extension ViewController: UITableViewDelegate,UITableViewDataSource{
+extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataArray.count
     }
