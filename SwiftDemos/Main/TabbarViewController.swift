@@ -15,6 +15,7 @@ class TabbarViewController: UITabBarController {
         setValue(Tabbar(), forKeyPath: "tabBar") // KVO
         
         tabBar.barTintColor = UIColor.white
+//        tabBar.isTranslucent = false
         
         addChild("首页", "tabbar_home", HomeViewController.self)
         addChild("消息", "tabbar_message_center", MessageViewController.self)
@@ -26,7 +27,8 @@ class TabbarViewController: UITabBarController {
                   _ imageName: String,
                   _ type : UIViewController.Type) {
     
-        let homeNav = UINavigationController(rootViewController: type.init())
+        let homeNav = MJNaviViewController(rootViewController: type.init())
+        homeNav.barStyle(.theme)
         homeNav.title = title
         homeNav.tabBarItem.image = UIImage(named: imageName)
         homeNav.tabBarItem.selectedImage = UIImage(named: (imageName + "_selected"))?.withRenderingMode(.alwaysOriginal)
@@ -36,5 +38,11 @@ class TabbarViewController: UITabBarController {
         addChild(homeNav)
     }
     
+}
 
+extension TabbarViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        guard let select = selectedViewController else { return .lightContent }
+        return select.preferredStatusBarStyle
+    }
 }

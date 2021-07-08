@@ -73,6 +73,14 @@
 		8EE16479269551BD00F96808 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE16478269551BD00F96808 /* Content.swift */; };
 		8EE1648426955AB700F96808 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1648326955AB700F96808 /* Item.swift */; };
 		8EE1648926955AD300F96808 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1648826955AD300F96808 /* User.swift */; };
+		8EE164A42695854E00F96808 /* MessageTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164A32695854E00F96808 /* MessageTabCell.swift */; };
+		8EE164AA26958D5F00F96808 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164A926958D5F00F96808 /* UIColorExtension.swift */; };
+		8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164C62695A75A00F96808 /* MyHeaderView.swift */; };
+		8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164CB269693F600F96808 /* SettingViewController.swift */; };
+		8EE164D126969FBC00F96808 /* MJNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164D026969FBC00F96808 /* MJNaviViewController.swift */; };
+		8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164D62696A68E00F96808 /* ParallaxHeaderMode.swift */; };
+		8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164D72696A68E00F96808 /* UIScrollView+ParallaxHeader.swift */; };
+		8EE164DB2696A68E00F96808 /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE164D82696A68E00F96808 /* ParallaxHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +175,14 @@
 		8EE16478269551BD00F96808 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		8EE1648326955AB700F96808 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8EE1648826955AD300F96808 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8EE164A32695854E00F96808 /* MessageTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTabCell.swift; sourceTree = "<group>"; };
+		8EE164A926958D5F00F96808 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8EE164C62695A75A00F96808 /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
+		8EE164CB269693F600F96808 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8EE164D026969FBC00F96808 /* MJNaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJNaviViewController.swift; sourceTree = "<group>"; };
+		8EE164D62696A68E00F96808 /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
+		8EE164D72696A68E00F96808 /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
+		8EE164D82696A68E00F96808 /* ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +216,7 @@
 			children = (
 				8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */,
 				8EAB1372268EB0EC00DEB5B1 /* MJBaseViewController.swift */,
+				8EE164D026969FBC00F96808 /* MJNaviViewController.swift */,
 				8E848F842694380300520E28 /* TabbarViewController.swift */,
 				8EE1644A2694410A00F96808 /* Tabbar.swift */,
 			);
@@ -233,12 +250,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		8E848F8C26943BB800520E28 /* Others */ = {
+		8E848F8C26943BB800520E28 /* My */ = {
 			isa = PBXGroup;
 			children = (
 				8E848F9826943C6900520E28 /* MyViewController.swift */,
+				8EE164C62695A75A00F96808 /* MyHeaderView.swift */,
+				8EE164CB269693F600F96808 /* SettingViewController.swift */,
 			);
-			path = Others;
+			path = My;
 			sourceTree = "<group>";
 		};
 		8EAB131D268EAA9E00DEB5B1 = {
@@ -266,11 +285,12 @@
 		8EAB1328268EAA9E00DEB5B1 /* SwiftDemos */ = {
 			isa = PBXGroup;
 			children = (
+				8EE164A826958D2C00F96808 /* Common */,
 				8EE1645B26945AEC00F96808 /* Qiushi */,
 				8E848F77269436E200520E28 /* Macro */,
 				8E848F75269436B500520E28 /* Main */,
 				8E848F76269436BE00520E28 /* Home */,
-				8E848F8C26943BB800520E28 /* Others */,
+				8E848F8C26943BB800520E28 /* My */,
 				8E848F782694370000520E28 /* Resource */,
 				8EAB132F268EAA9E00DEB5B1 /* Main.storyboard */,
 				8EAB1332268EAAA000DEB5B1 /* Assets.xcassets */,
@@ -379,11 +399,31 @@
 			children = (
 				8EE1645C26945B5200F96808 /* API.swift */,
 				8EE1646426945E2B00F96808 /* MessageViewController.swift */,
+				8EE164A32695854E00F96808 /* MessageTabCell.swift */,
 				8EE16478269551BD00F96808 /* Content.swift */,
 				8EE1648326955AB700F96808 /* Item.swift */,
 				8EE1648826955AD300F96808 /* User.swift */,
 			);
 			path = Qiushi;
+			sourceTree = "<group>";
+		};
+		8EE164A826958D2C00F96808 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8EE164A926958D5F00F96808 /* UIColorExtension.swift */,
+				8EE164D52696A68E00F96808 /* ParallaxHeader */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8EE164D52696A68E00F96808 /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8EE164D62696A68E00F96808 /* ParallaxHeaderMode.swift */,
+				8EE164D72696A68E00F96808 /* UIScrollView+ParallaxHeader.swift */,
+				8EE164D82696A68E00F96808 /* ParallaxHeader.swift */,
+			);
+			path = ParallaxHeader;
 			sourceTree = "<group>";
 		};
 		AF7FAFA1E6F7777C41C5C5C1 /* Pods */ = {
@@ -618,7 +658,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE164DB2696A68E00F96808 /* ParallaxHeader.swift in Sources */,
 				8EAB1385268EB69D00DEB5B1 /* MJWeatherViewController.swift in Sources */,
+				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
+				8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */,
 				8EAB1373268EB0EC00DEB5B1 /* MJBaseViewController.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
 				8EC317242692D22A00DE462C /* MJPickerViewController.swift in Sources */,
@@ -626,6 +669,7 @@
 				8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */,
 				8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */,
 				8EAB13F6268EE0C700DEB5B1 /* MJTextInputViewController.swift in Sources */,
+				8EE164AA26958D5F00F96808 /* UIColorExtension.swift in Sources */,
 				8EAB1402268EEDD800DEB5B1 /* MJAudioViewController.swift in Sources */,
 				8E848F852694380300520E28 /* TabbarViewController.swift in Sources */,
 				8EE1648426955AB700F96808 /* Item.swift in Sources */,
@@ -634,9 +678,13 @@
 				8EAB136B268EB08F00DEB5B1 /* MJFontViewController.swift in Sources */,
 				8EE16479269551BD00F96808 /* Content.swift in Sources */,
 				8EC3171C2692B3B100DE462C /* MJStretchyViewController.swift in Sources */,
+				8EE164D126969FBC00F96808 /* MJNaviViewController.swift in Sources */,
 				8EE1645D26945B5200F96808 /* API.swift in Sources */,
+				8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
+				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
 				8EE1648926955AD300F96808 /* User.swift in Sources */,
+				8EE164A42695854E00F96808 /* MessageTabCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

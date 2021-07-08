@@ -17,18 +17,25 @@ class MessageViewController: MJBaseViewController {
     lazy var tableView = UITableView()
     lazy var items = [Item]()
     var page = 1
-    
+    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "消息"
+        setupTableView()
+
+    }
+    
+    func setupTableView() {
         
-        tableView.frame = view.bounds
+        tableView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - nav_bar_h - tab_bar_h)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         view.addSubview(tableView)
+        
+        tableView.register(MessageTabCell.self, forCellReuseIdentifier: cellId)
         
         let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadData))
         header.beginRefreshing()
@@ -36,7 +43,6 @@ class MessageViewController: MJBaseViewController {
      
         let footer = MJRefreshBackNormalFooter(refreshingBlock: self.loadMoreData)
         tableView.mj_footer = footer
-
     }
     
     @objc func loadData() {
@@ -99,18 +105,21 @@ extension MessageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellId = "cellID"
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        }
+        let cell = MessageTabCell(style: .default, reuseIdentifier: cellId)
         let item = items[indexPath.row]
+        cell.model = item
+//        let cellId = "cellID"
+//        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+//        if cell == nil {
+//            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+//        }
         
-        let url = item.user.thumb.replacingOccurrences(of: ".webp", with: ".jpg")
-        cell?.imageView?.kf.setImage(with: URL(string: url))
-        cell?.textLabel?.text = item.user.login
-        cell?.detailTextLabel?.text = item.content
-        return cell!
+//        let item = items[indexPath.row]
+//        let url = item.user.thumb.replacingOccurrences(of: ".webp", with: ".jpg")
+//        cell.imageView?.kf.setImage(with: URL(string: url))
+//        cell.textLabel?.text = item.user.login
+//        cell.detailTextLabel?.text = item.content
+        return cell
     }
     
     

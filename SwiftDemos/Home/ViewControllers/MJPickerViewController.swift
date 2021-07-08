@@ -24,7 +24,7 @@ class MJPickerViewController: MJBaseViewController {
         
         pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 220))
         pickerView.center.x = self.view.center.x
-        pickerView.center.y = self.view.center.y - 50
+        pickerView.center.y = self.view.center.y - 100
         pickerView.delegate = self
         pickerView.dataSource = self
         self.view.addSubview(pickerView)
@@ -39,7 +39,7 @@ class MJPickerViewController: MJBaseViewController {
         slotBtn.setTitle("Slot", for: .normal)
         slotBtn.setTitleColor(UIColor.white, for: .normal)
         slotBtn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        slotBtn.center.y = self.view.center.y + 140
+        slotBtn.center.y = self.view.center.y + 100
         slotBtn.center.x = self.view.center.x
         slotBtn.addTarget(self, action: #selector(slotBtnClicked), for: .touchUpInside)
         self.view.addSubview(slotBtn)
