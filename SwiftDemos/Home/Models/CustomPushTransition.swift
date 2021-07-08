@@ -19,8 +19,8 @@ class CustomPushTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         //1.获取动画的源控制器和目标控制器
-        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as! ViewController
-        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! DetailViewController
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as! TransitionViewController
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! TransDetailViewController
         let container = transitionContext.containerView
             
         // 创建一个 imageView 的截图，并把 imageView 隐藏，造成使用户以为移动的就是 imageView 的假象
@@ -35,8 +35,13 @@ class CustomPushTransition: NSObject, UIViewControllerAnimatedTransitioning {
         container.addSubview(toVC.view)
         container.addSubview(snapshotView!)
         toVC.bannerImgVi.layoutIfNeeded()
+    
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: UIView.AnimationOptions(), animations: {
-            snapshotView?.frame = toVC.bannerImgVi.frame
+            
+            var toFrame = toVC.bannerImgVi.frame
+            toFrame.origin.y = nav_bar_h
+            snapshotView?.frame = toFrame
+            
             fromVC.view.alpha = 0
             toVC.view.alpha = 1
         }) { (finish) in

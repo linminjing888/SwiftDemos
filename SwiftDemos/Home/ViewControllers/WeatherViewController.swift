@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import SnapKit
 
-class MJWeatherViewController: MJBaseViewController {
+class WeatherViewController: MJBaseViewController {
 
     
     var locationManager = CLLocationManager()
@@ -142,7 +142,7 @@ class MJWeatherViewController: MJBaseViewController {
 
 }
 
-extension MJWeatherViewController:CLLocationManagerDelegate {
+extension WeatherViewController:CLLocationManagerDelegate {
     
     func locationInit() {
         // 定位

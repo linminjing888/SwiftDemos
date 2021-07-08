@@ -14,8 +14,8 @@ class CustomPopTransition: NSObject,UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as! DetailViewController
-        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! ViewController
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as! TransDetailViewController
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! TransitionViewController
         let container = transitionContext.containerView
         
         let snapshotView = fromVC.bannerImgVi.snapshotView(afterScreenUpdates: false)

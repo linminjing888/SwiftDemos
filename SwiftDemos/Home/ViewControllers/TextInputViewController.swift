@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MJTextInputViewController: MJBaseViewController {
+class TextInputViewController: MJBaseViewController {
 
     var inputTextView: UITextView!
     var limitLbl: UILabel!
@@ -50,7 +50,7 @@ class MJTextInputViewController: MJBaseViewController {
 
 }
 
-extension MJTextInputViewController: UITextViewDelegate {
+extension TextInputViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         var currentCount = textView.text.count

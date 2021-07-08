@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MJPickerViewController: MJBaseViewController {
+class PickerViewController: MJBaseViewController {
 
     var pickerView:UIPickerView!
     var emojiArr = ["😀","😎","😈","👻","🙈","🐶","🌚","🍎","🎾","🐥","🐔"]
@@ -88,7 +88,7 @@ class MJPickerViewController: MJBaseViewController {
 
 }
 
-extension MJPickerViewController: UIPickerViewDelegate,UIPickerViewDataSource {
+extension PickerViewController: UIPickerViewDelegate,UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }

@@ -18,7 +18,7 @@ class HomeViewController: MJBaseViewController {
         view.backgroundColor = UIColor.white
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition"]
         
         setupUI()
     }
@@ -63,19 +63,22 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
             let vc = MJFontViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 1 {
-            let vc = MJWeatherViewController()
+            let vc = WeatherViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 2 {
-            let vc = MJTextInputViewController()
+            let vc = TextInputViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 3 {
-            let vc = MJAudioViewController()
+            let vc = AudioViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }  else if indexPath.row == 4 {
-            let vc = MJStretchyViewController()
+            let vc = StretchyViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }  else if indexPath.row == 5 {
-            let vc = MJPickerViewController()
+            let vc = PickerViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 6 {
+            let vc = TransitionViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

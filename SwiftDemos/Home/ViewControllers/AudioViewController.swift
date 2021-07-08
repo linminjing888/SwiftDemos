@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class MJAudioViewController: MJBaseViewController {
+class AudioViewController: MJBaseViewController {
 
     var audioPlayer: AVAudioPlayer?
     
