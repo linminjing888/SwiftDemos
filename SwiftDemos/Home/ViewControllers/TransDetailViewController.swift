@@ -58,7 +58,6 @@ class TransDetailViewController: MJBaseViewController {
         }
     }
     
-
 }
 
 extension TransDetailViewController: UINavigationControllerDelegate {

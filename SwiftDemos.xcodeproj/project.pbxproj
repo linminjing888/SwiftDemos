@@ -87,6 +87,7 @@
 		8EE1652E2696EFAE00F96808 /* TransDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1652D2696EFAE00F96808 /* TransDetailViewController.swift */; };
 		8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165322696F0DC00F96808 /* CustomPushTransition.swift */; };
 		8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165522696F85600F96808 /* CustomPopTransition.swift */; };
+		8EE165582697E6D900F96808 /* MJGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165572697E6D900F96808 /* MJGlobal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,7 @@
 		8EE1652D2696EFAE00F96808 /* TransDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDetailViewController.swift; sourceTree = "<group>"; };
 		8EE165322696F0DC00F96808 /* CustomPushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPushTransition.swift; path = SwiftDemos/Home/Models/CustomPushTransition.swift; sourceTree = SOURCE_ROOT; };
 		8EE165522696F85600F96808 /* CustomPopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopTransition.swift; sourceTree = "<group>"; };
+		8EE165572697E6D900F96808 /* MJGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJGlobal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				8EE164A926958D5F00F96808 /* UIColorExtension.swift */,
+				8EE165572697E6D900F96808 /* MJGlobal.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
 				8EE1652E2696EFAE00F96808 /* TransDetailViewController.swift in Sources */,
+				8EE165582697E6D900F96808 /* MJGlobal.swift in Sources */,
 				8EE1648926955AD300F96808 /* User.swift in Sources */,
 				8EE164A42695854E00F96808 /* MessageTabCell.swift in Sources */,
 			);

@@ -52,7 +52,7 @@ class MyViewController: MJBaseViewController {
         
 //        view.backgroundColor = UIColor.hex(hexString: "f69c9f")
         edgesForExtendedLayout = .top
-        
+        MJLog("123")
     }
     
     override func setupLayout() {

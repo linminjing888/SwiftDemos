@@ -13,7 +13,7 @@ class Tabbar: UITabBar {
         super.layoutSubviews()
         
         for button in subviews where button is UIControl{
-            print(button)
+//            print(button)
             var frame = button.frame
             frame.origin.y = -2
             button.frame = frame

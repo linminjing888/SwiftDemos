@@ -31,8 +31,10 @@ class MJBaseViewController: UIViewController {
     func setupLayout() {}
     
     func configNavigationBar() {
-        guard let navi = navigationController else { return }
+        guard let navi = navigationController as? MJNaviViewController else { return }
         if navi.visibleViewController == self {
+            
+            navi.disablePopGesture = false  // 好像没起作用 mjfix me
             
             navi.setNavigationBarHidden(false, animated: true)
             if navi.viewControllers.count > 1 {
