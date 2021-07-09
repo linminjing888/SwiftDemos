@@ -11,22 +11,9 @@ class MJNaviViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupLayout()
-    }
-    
-    func setupLayout() {
-        guard let interactionGes = interactivePopGestureRecognizer else { return }
-        guard let targetView = interactionGes.view else { return }
-        guard let internalTargets = interactionGes.value(forKeyPath: "targets") as? [NSObject] else { return }
-        guard let internalTarget = internalTargets.first?.value(forKey: "target") else { return }
-        let action = Selector(("handleNavigationTransition:"))
         
-        let fullScreenGesture = UIPanGestureRecognizer(target: internalTarget, action: action)
-        fullScreenGesture.delegate = self
-        targetView.addGestureRecognizer(fullScreenGesture)
-        interactionGes.isEnabled = false
-        
+        // 在自定义导航控制器 或者 自定义返回按键的时候,滑动返回的手势经常会失效. 下面是解决的方法
+        self.interactivePopGestureRecognizer?.delegate = self // 1.
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -34,22 +21,13 @@ class MJNaviViewController: UINavigationController {
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)
+        self.interactivePopGestureRecognizer?.isEnabled = true // 3.
     }
 
 }
 
-extension MJNaviViewController: UIGestureRecognizerDelegate {
+extension MJNaviViewController: UIGestureRecognizerDelegate,UINavigationControllerDelegate { // 2.
     
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        let isLeftToRight = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight
-        guard let ges = gestureRecognizer as? UIPanGestureRecognizer else {
-            return true
-        }
-        if ges.translation(in: gestureRecognizer.view).x * (isLeftToRight ? 1 : -1) <= 0 || disablePopGesture {
-            return false
-        }
-        return viewControllers.count != 1
-    }
 }
 
 extension MJNaviViewController {
@@ -68,18 +46,18 @@ enum NavigationBarStyle {
 
 extension UINavigationController {
     
-    private struct AssociatedKeys {
-        static var disablePopGesture: Void?
-    }
-    
-    var disablePopGesture: Bool {
-        get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.disablePopGesture) as? Bool ?? false
-        }
-        set {
-            objc_setAssociatedObject(self, &AssociatedKeys.disablePopGesture, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
+//    private struct AssociatedKeys {
+//        static var disablePopGesture: Void?
+//    }
+//    
+//    var disablePopGesture: Bool {
+//        get {
+//            return objc_getAssociatedObject(self, &AssociatedKeys.disablePopGesture) as? Bool ?? false
+//        }
+//        set {
+//            objc_setAssociatedObject(self, &AssociatedKeys.disablePopGesture, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+//        }
+//    }
     
     func barStyle(_ style: NavigationBarStyle) {
         switch style {
