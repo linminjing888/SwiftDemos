@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0BD53DC9F797F407B9FFDF7E /* Pods_SwiftDemos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B21FBEC0BA395A73D546D11 /* Pods_SwiftDemos.framework */; };
+		8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C19269C19C30012BF18 /* MJAPI.swift */; };
+		8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C20269C36D90012BF18 /* BookDetailViewController.swift */; };
+		8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */; };
 		8E848F852694380300520E28 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F842694380300520E28 /* TabbarViewController.swift */; };
 		8E848F9926943C6900520E28 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F9826943C6900520E28 /* MyViewController.swift */; };
 		8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */; };
@@ -111,6 +114,9 @@
 		03D4E653F6616F7AEC4B0F1D /* Pods-SwiftDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemos.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemos/Pods-SwiftDemos.release.xcconfig"; sourceTree = "<group>"; };
 		3B80AD907111B124C97B6BA3 /* Pods-SwiftDemos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemos.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemos/Pods-SwiftDemos.debug.xcconfig"; sourceTree = "<group>"; };
 		5B21FBEC0BA395A73D546D11 /* Pods_SwiftDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E228C19269C19C30012BF18 /* MJAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJAPI.swift; sourceTree = "<group>"; };
+		8E228C20269C36D90012BF18 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStaticModel.swift; sourceTree = "<group>"; };
 		8E848F842694380300520E28 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		8E848F9826943C6900520E28 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		8EAB1326268EAA9E00DEB5B1 /* SwiftDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +231,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E228C1E269C369A0012BF18 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8EE1645C26945B5200F96808 /* API.swift */,
+				8EE1646426945E2B00F96808 /* MessageViewController.swift */,
+				8EE164A32695854E00F96808 /* MessageTabCell.swift */,
+				8EE16478269551BD00F96808 /* Content.swift */,
+				8EE1648326955AB700F96808 /* Item.swift */,
+				8EE1648826955AD300F96808 /* User.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		8E228C1F269C36BB0012BF18 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8E228C20269C36D90012BF18 /* BookDetailViewController.swift */,
+				8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		8E848F75269436B500520E28 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +329,7 @@
 			children = (
 				8EE165082696E7D600F96808 /* Others */,
 				8EE164A826958D2C00F96808 /* Common */,
-				8EE1645B26945AEC00F96808 /* Qiushi */,
+				8EE1645B26945AEC00F96808 /* Message */,
 				8E848F77269436E200520E28 /* Macro */,
 				8E848F75269436B500520E28 /* Main */,
 				8E848F76269436BE00520E28 /* Home */,
@@ -415,17 +443,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8EE1645B26945AEC00F96808 /* Qiushi */ = {
+		8EE1645B26945AEC00F96808 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				8EE1645C26945B5200F96808 /* API.swift */,
-				8EE1646426945E2B00F96808 /* MessageViewController.swift */,
-				8EE164A32695854E00F96808 /* MessageTabCell.swift */,
-				8EE16478269551BD00F96808 /* Content.swift */,
-				8EE1648326955AB700F96808 /* Item.swift */,
-				8EE1648826955AD300F96808 /* User.swift */,
+				8E228C1F269C36BB0012BF18 /* Detail */,
+				8E228C1E269C369A0012BF18 /* Message */,
 			);
-			path = Qiushi;
+			path = Message;
 			sourceTree = "<group>";
 		};
 		8EE164A826958D2C00F96808 /* Common */ = {
@@ -433,6 +457,7 @@
 			children = (
 				8EE164A926958D5F00F96808 /* UIColorExtension.swift */,
 				8EE165572697E6D900F96808 /* MJGlobal.swift */,
+				8E228C19269C19C30012BF18 /* MJAPI.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -692,6 +717,7 @@
 				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */,
 				8EAB1373268EB0EC00DEB5B1 /* MJBaseViewController.swift in Sources */,
+				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
 				8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */,
 				8EAB138A268EB72E00DEB5B1 /* WeatherModel.swift in Sources */,
@@ -701,6 +727,7 @@
 				8EE164AA26958D5F00F96808 /* UIColorExtension.swift in Sources */,
 				8EE165292696EDD000F96808 /* TransCollectionCell.swift in Sources */,
 				8EAB1402268EEDD800DEB5B1 /* AudioViewController.swift in Sources */,
+				8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */,
 				8E848F852694380300520E28 /* TabbarViewController.swift in Sources */,
 				8EE1648426955AB700F96808 /* Item.swift in Sources */,
 				8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */,
@@ -714,6 +741,7 @@
 				8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */,
 				8EE1645D26945B5200F96808 /* API.swift in Sources */,
 				8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */,
+				8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,

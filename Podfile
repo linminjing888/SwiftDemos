@@ -13,5 +13,7 @@ target 'SwiftDemos' do
   pod 'Kingfisher', '~> 6.2.0'
   pod 'MJRefresh', '~> 3.5.0'
   pod 'HandyJSON', '~> 5.0.2'
+  pod 'Moya', '~> 14.0'
+  pod 'MBProgressHUD', '~> 1.2.0'
   
 end
