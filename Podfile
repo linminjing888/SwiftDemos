@@ -15,5 +15,6 @@ target 'SwiftDemos' do
   pod 'HandyJSON', '~> 5.0.2'
   pod 'Moya', '~> 14.0'
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'HMSegmentedControl'
   
 end

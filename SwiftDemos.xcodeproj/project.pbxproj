@@ -68,6 +68,10 @@
 		8EAB13F6268EE0C700DEB5B1 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB13F5268EE0C700DEB5B1 /* TextInputViewController.swift */; };
 		8EAB1402268EEDD800DEB5B1 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1401268EEDD800DEB5B1 /* AudioViewController.swift */; };
 		8EAB1407268EEF3600DEB5B1 /* live.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB1406268EEF3500DEB5B1 /* live.mp3 */; };
+		8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6603626A6A1EE00EE506D /* MJPageViewController.swift */; };
+		8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6604826A6B43E00EE506D /* ContentDetailViewController.swift */; };
+		8EB6604E26A6B46400EE506D /* ContentChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6604D26A6B46400EE506D /* ContentChapterViewController.swift */; };
+		8EB6605326A6B47500EE506D /* ContentCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */; };
 		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
 		8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1644A2694410A00F96808 /* Tabbar.swift */; };
@@ -180,6 +184,10 @@
 		8EAB13F5268EE0C700DEB5B1 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		8EAB1401268EEDD800DEB5B1 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		8EAB1406268EEF3500DEB5B1 /* live.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = live.mp3; sourceTree = "<group>"; };
+		8EB6603626A6A1EE00EE506D /* MJPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJPageViewController.swift; sourceTree = "<group>"; };
+		8EB6604826A6B43E00EE506D /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		8EB6604D26A6B46400EE506D /* ContentChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChapterViewController.swift; sourceTree = "<group>"; };
+		8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCommentViewController.swift; sourceTree = "<group>"; };
 		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8EE1644A2694410A00F96808 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
@@ -249,6 +257,10 @@
 			children = (
 				8E228C20269C36D90012BF18 /* BookDetailViewController.swift */,
 				8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */,
+				8EB6603626A6A1EE00EE506D /* MJPageViewController.swift */,
+				8EB6604826A6B43E00EE506D /* ContentDetailViewController.swift */,
+				8EB6604D26A6B46400EE506D /* ContentChapterViewController.swift */,
+				8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -329,10 +341,10 @@
 			children = (
 				8EE165082696E7D600F96808 /* Others */,
 				8EE164A826958D2C00F96808 /* Common */,
-				8EE1645B26945AEC00F96808 /* Message */,
 				8E848F77269436E200520E28 /* Macro */,
 				8E848F75269436B500520E28 /* Main */,
 				8E848F76269436BE00520E28 /* Home */,
+				8EE1645B26945AEC00F96808 /* Message */,
 				8E848F8C26943BB800520E28 /* My */,
 				8E848F782694370000520E28 /* Resource */,
 				8EAB132F268EAA9E00DEB5B1 /* Main.storyboard */,
@@ -715,6 +727,7 @@
 				8EE164DB2696A68E00F96808 /* ParallaxHeader.swift in Sources */,
 				8EAB1385268EB69D00DEB5B1 /* WeatherViewController.swift in Sources */,
 				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
+				8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */,
 				8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */,
 				8EAB1373268EB0EC00DEB5B1 /* MJBaseViewController.swift in Sources */,
 				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
@@ -740,10 +753,13 @@
 				8EE164D126969FBC00F96808 /* MJNaviViewController.swift in Sources */,
 				8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */,
 				8EE1645D26945B5200F96808 /* API.swift in Sources */,
+				8EB6605326A6B47500EE506D /* ContentCommentViewController.swift in Sources */,
 				8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */,
+				8EB6604E26A6B46400EE506D /* ContentChapterViewController.swift in Sources */,
 				8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
+				8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
 				8EE1652E2696EFAE00F96808 /* TransDetailViewController.swift in Sources */,
 				8EE165582697E6D900F96808 /* MJGlobal.swift in Sources */,

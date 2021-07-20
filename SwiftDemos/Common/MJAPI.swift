@@ -96,6 +96,7 @@ extension MJApi: TargetType {
 extension Response {
     func mapModel<T: HandyJSON>(_ type: T.Type) throws -> T {
         let jsonString = String(data: data, encoding: .utf8)
+        print(jsonString as Any)
         guard let model = JSONDeserializer<T>.deserializeFrom(json: jsonString) else {
             throw MoyaError.jsonMapping(self)
         }

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.2)
   - HandyJSON (5.0.2)
+  - HMSegmentedControl (1.5.6)
   - Kingfisher (6.2.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.4)
   - HandyJSON (~> 5.0.2)
+  - HMSegmentedControl
   - Kingfisher (~> 6.2.0)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.5.0)
@@ -25,6 +27,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - HandyJSON
+    - HMSegmentedControl
     - Kingfisher
     - MBProgressHUD
     - MJRefresh
@@ -35,6 +38,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  HMSegmentedControl: 34c1f54d822d8308e7b24f5d901ec674dfa31352
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
@@ -42,6 +46,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 5f516702cb72c42b2e6395f43f59f24ac7c2e484
+PODFILE CHECKSUM: 0499dc06282eff812f1d852053e5b113574e7daf
 
 COCOAPODS: 1.10.1

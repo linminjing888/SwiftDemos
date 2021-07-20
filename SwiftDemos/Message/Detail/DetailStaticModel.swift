@@ -8,10 +8,6 @@
 import Foundation
 import HandyJSON
 
-struct DetailStaticModel: HandyJSON {
-    var comic: ComicStaticModel?
-    
-}
 
 struct ComicStaticModel: HandyJSON {
     var name: String?
@@ -38,3 +34,40 @@ struct ComicStaticModel: HandyJSON {
     var is_dub: Bool = false
     
 }
+
+struct LBUImHightModel: HandyJSON {
+    var height: Int = 0
+    var width: Int = 0
+}
+
+struct ChapterStaticModel: HandyJSON {
+    var chapter_id: Int = 0
+    var name: String?
+    var image_total: Int = 0
+    var type: Int = 0
+    var price:String?
+    var size: Int32 = 0
+    var pass_time: TimeInterval = 0
+    var release_time: TimeInterval = 0
+    var zip_high_webp: Int = 0
+    var is_new: Bool = false
+    var has_locked_image: Bool = false
+    var imHightArr: [[LBUImHightModel]]?
+    var countImHightArr: Int = 0
+}
+
+struct OtherWorkModel: HandyJSON {
+    var comicId: Int = 0
+    var coverUrl: String?
+    var name: String?
+    var passChapterNum: Int = 0
+    
+}
+
+struct DetailStaticModel: HandyJSON {
+    var comic: ComicStaticModel?
+    var chapter_list: [ChapterStaticModel]?
+    var otherWorks: [OtherWorkModel]?
+}
+
+
