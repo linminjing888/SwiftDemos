@@ -46,3 +46,16 @@ func MJLog<T>(_ message: T, file: String = #file, function: String = #function, 
     print("[\(fileName)- funciton:\(function)- line:\(lineNumber)]- \(message)")
     #endif
 }
+
+
+import SnapKit
+extension ConstraintView {
+
+    var usnp: ConstraintBasicAttributesDSL {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.snp
+        } else {
+            return self.snp
+        }
+    }
+}

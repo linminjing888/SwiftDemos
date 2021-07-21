@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ComicViewWillEndDraggingDelegate: class {
+    
+    func comicViewWillEndDragging (_ scrollView: UIScrollView)
+}
+
 class BookDetailViewController: MJBaseViewController {
 
     private lazy var detailVC: ContentDetailViewController = {
@@ -16,6 +21,7 @@ class BookDetailViewController: MJBaseViewController {
     
     lazy var chapterVC: ContentChapterViewController = {
         let chapterVC = ContentChapterViewController()
+        chapterVC.delegate = self
         return chapterVC
     }()
     
@@ -32,11 +38,12 @@ class BookDetailViewController: MJBaseViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.background
-        ApiLoadingProvider.request(MJApi.detailStatic(comicid: 3166), model: DetailStaticModel.self) { (detailStatic) in
+        ApiLoadingProvider.request(MJApi.detailStatic(comicid: 3166), model: DetailStaticModel.self) { [weak self] (detailStatic) in
             
             let name = detailStatic?.comic?.name ?? "-"
-            print(name)
-            self.title = name
+            self?.title = name
+            
+            self?.chapterVC.detailStatic = detailStatic
         }
         
         addChild(pageVC)
@@ -46,6 +53,12 @@ class BookDetailViewController: MJBaseViewController {
         }
         
     }
-    
+}
 
+extension BookDetailViewController: ComicViewWillEndDraggingDelegate {
+    
+    func comicViewWillEndDragging(_ scrollView: UIScrollView) {
+        print("333")
+    }
+    
 }
