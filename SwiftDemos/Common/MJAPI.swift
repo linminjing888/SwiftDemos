@@ -40,10 +40,13 @@ let timeoutClosure = {(endpoint: Endpoint ,closure: MoyaProvider.RequestResultCl
 }
 
 enum MJApi {
-    //排行列表
-    case rankList
+   
     //详情(基本)
     case detailStatic(comicid: Int)
+    //评论
+    case commentList(object_id: Int, thread_id: Int, page: Int)
+    //排行列表
+    case rankList
     //详情(实时)
     case detailRealtime(comicid: Int)
     //搜索结果
@@ -57,8 +60,11 @@ extension MJApi: TargetType {
     
     var path: String {
         switch self {
-        case .rankList: return "rank/list"
+        
         case .detailStatic: return "comic/detail_static_new"
+        case .commentList: return "comment/list"
+            
+        case .rankList: return "rank/list"
         case .detailRealtime: return "comic/detail_realtime"
         case .searchResult: return "search/searchResult"
      
@@ -76,11 +82,16 @@ extension MJApi: TargetType {
     var task: Task {
         var parmeters: [String : Any] = [:]
         switch self {
+  
+        case .detailStatic(let comicid),.detailRealtime(comicid: let comicid):
+            parmeters["comicid"] = comicid
+        case .commentList(let object_id, let thread_id, let page):
+            parmeters["object_id"] = object_id
+            parmeters["thread_id"] = thread_id
+            parmeters["page"] = page
         case .searchResult(let argCon, let q):
             parmeters["argCon"] = argCon
             parmeters["q"] = q
-        case .detailStatic(let comicid),.detailRealtime(comicid: let comicid):
-            parmeters["comicid"] = comicid
         default:
             break
         }

@@ -74,6 +74,7 @@
 		8EB6605326A6B47500EE506D /* ContentCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */; };
 		8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */; };
 		8EB6605D26A7CECB00EE506D /* ChapterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */; };
+		8EB660D026A95FCB00EE506D /* CommentListTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660CF26A95FCB00EE506D /* CommentListTabCell.swift */; };
 		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
 		8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1644A2694410A00F96808 /* Tabbar.swift */; };
@@ -192,6 +193,7 @@
 		8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCommentViewController.swift; sourceTree = "<group>"; };
 		8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionCell.swift; sourceTree = "<group>"; };
 		8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionReusableView.swift; sourceTree = "<group>"; };
+		8EB660CF26A95FCB00EE506D /* CommentListTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListTabCell.swift; sourceTree = "<group>"; };
 		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8EE1644A2694410A00F96808 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
@@ -259,14 +261,9 @@
 		8E228C1F269C36BB0012BF18 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				8E228C20269C36D90012BF18 /* BookDetailViewController.swift */,
-				8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */,
-				8EB6603626A6A1EE00EE506D /* MJPageViewController.swift */,
-				8EB6604826A6B43E00EE506D /* ContentDetailViewController.swift */,
-				8EB6604D26A6B46400EE506D /* ContentChapterViewController.swift */,
-				8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */,
-				8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */,
-				8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */,
+				8EB660CB26A81FFC00EE506D /* Model */,
+				8EB660CA26A81FED00EE506D /* Views */,
+				8EB660C926A81FE400EE506D /* Controller */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -451,6 +448,36 @@
 				8EAB13C3268EDE4000DEB5B1 /* 0.png */,
 			);
 			path = "天气现象图标";
+			sourceTree = "<group>";
+		};
+		8EB660C926A81FE400EE506D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E228C20269C36D90012BF18 /* BookDetailViewController.swift */,
+				8EB6603626A6A1EE00EE506D /* MJPageViewController.swift */,
+				8EB6604826A6B43E00EE506D /* ContentDetailViewController.swift */,
+				8EB6604D26A6B46400EE506D /* ContentChapterViewController.swift */,
+				8EB6605226A6B47500EE506D /* ContentCommentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EB660CA26A81FED00EE506D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */,
+				8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */,
+				8EB660CF26A95FCB00EE506D /* CommentListTabCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EB660CB26A81FFC00EE506D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8EC3170F26929B2F00DE462C /* Views */ = {
@@ -763,6 +790,7 @@
 				8EB6605326A6B47500EE506D /* ContentCommentViewController.swift in Sources */,
 				8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */,
 				8EB6604E26A6B46400EE506D /* ContentChapterViewController.swift in Sources */,
+				8EB660D026A95FCB00EE506D /* CommentListTabCell.swift in Sources */,
 				8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,

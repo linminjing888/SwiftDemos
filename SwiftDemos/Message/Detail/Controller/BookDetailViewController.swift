@@ -44,6 +44,13 @@ class BookDetailViewController: MJBaseViewController {
             self?.title = name
             
             self?.chapterVC.detailStatic = detailStatic
+            self?.commentVC.detailStatic = detailStatic
+            
+            ApiLoadingProvider.request(MJApi.commentList(object_id: detailStatic?.comic?.comic_id ?? 0, thread_id: detailStatic?.comic?.thread_id ?? 0, page: -1), model: CommentListMode.self) { (commentList) in
+                
+                self?.commentVC.commentList = commentList
+            }
+            
         }
         
         addChild(pageVC)
