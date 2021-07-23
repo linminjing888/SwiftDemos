@@ -75,6 +75,9 @@
 		8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */; };
 		8EB6605D26A7CECB00EE506D /* ChapterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */; };
 		8EB660D026A95FCB00EE506D /* CommentListTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660CF26A95FCB00EE506D /* CommentListTabCell.swift */; };
+		8EB660D526AA679700EE506D /* DescriptionTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660D426AA679700EE506D /* DescriptionTabCell.swift */; };
+		8EB660DA26AA92E000EE506D /* GuessLikeTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660D926AA92E000EE506D /* GuessLikeTabCell.swift */; };
+		8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */; };
 		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
 		8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1644A2694410A00F96808 /* Tabbar.swift */; };
@@ -194,6 +197,9 @@
 		8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionCell.swift; sourceTree = "<group>"; };
 		8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCollectionReusableView.swift; sourceTree = "<group>"; };
 		8EB660CF26A95FCB00EE506D /* CommentListTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListTabCell.swift; sourceTree = "<group>"; };
+		8EB660D426AA679700EE506D /* DescriptionTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTabCell.swift; sourceTree = "<group>"; };
+		8EB660D926AA92E000EE506D /* GuessLikeTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeTabCell.swift; sourceTree = "<group>"; };
+		8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeCollectionCell.swift; sourceTree = "<group>"; };
 		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8EE1644A2694410A00F96808 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
@@ -468,6 +474,9 @@
 				8EB6605726A7BEFD00EE506D /* ChapterCollectionCell.swift */,
 				8EB6605C26A7CECB00EE506D /* ChapterCollectionReusableView.swift */,
 				8EB660CF26A95FCB00EE506D /* CommentListTabCell.swift */,
+				8EB660D426AA679700EE506D /* DescriptionTabCell.swift */,
+				8EB660D926AA92E000EE506D /* GuessLikeTabCell.swift */,
+				8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -759,10 +768,12 @@
 			files = (
 				8EE164DB2696A68E00F96808 /* ParallaxHeader.swift in Sources */,
 				8EAB1385268EB69D00DEB5B1 /* WeatherViewController.swift in Sources */,
+				8EB660D526AA679700EE506D /* DescriptionTabCell.swift in Sources */,
 				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */,
 				8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */,
 				8EAB1373268EB0EC00DEB5B1 /* MJBaseViewController.swift in Sources */,
+				8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */,
 				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
 				8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
@@ -794,6 +805,7 @@
 				8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
+				8EB660DA26AA92E000EE506D /* GuessLikeTabCell.swift in Sources */,
 				8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
 				8EE1652E2696EFAE00F96808 /* TransDetailViewController.swift in Sources */,

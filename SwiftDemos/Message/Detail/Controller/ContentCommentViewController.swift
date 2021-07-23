@@ -9,7 +9,7 @@ import UIKit
 import MJRefresh
 
 class ContentCommentViewController: MJBaseViewController {
-
+    
     private var listArray = [CommentViewModel]()
     
     var detailStatic: DetailStaticModel?
@@ -23,6 +23,8 @@ class ContentCommentViewController: MJBaseViewController {
             self.tableView.reloadData()
         }
     }
+    
+    weak var delegate:ComicViewWillEndDraggingDelegate?
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -63,6 +65,10 @@ class ContentCommentViewController: MJBaseViewController {
 }
 
 extension ContentCommentViewController: UITableViewDelegate, UITableViewDataSource{
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        delegate?.comicViewWillEndDragging(scrollView)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         listArray.count
     }
@@ -76,5 +82,4 @@ extension ContentCommentViewController: UITableViewDelegate, UITableViewDataSour
         cell.viewModel = listArray[indexPath.row]
         return cell
     }
-    
 }

@@ -27,6 +27,7 @@ class BookDetailViewController: MJBaseViewController {
     
     lazy var commentVC: ContentCommentViewController = {
         let commentVC = ContentCommentViewController()
+        commentVC.delegate = self
         return commentVC
     }()
     
@@ -37,20 +38,35 @@ class BookDetailViewController: MJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let group = DispatchGroup()
+        
+        group.enter()
         view.backgroundColor = UIColor.background
         ApiLoadingProvider.request(MJApi.detailStatic(comicid: 3166), model: DetailStaticModel.self) { [weak self] (detailStatic) in
             
             let name = detailStatic?.comic?.name ?? "-"
             self?.title = name
             
+            self?.detailVC.detailStatic = detailStatic
+//            self?.detailVC.reloadData()
             self?.chapterVC.detailStatic = detailStatic
             self?.commentVC.detailStatic = detailStatic
             
-            ApiLoadingProvider.request(MJApi.commentList(object_id: detailStatic?.comic?.comic_id ?? 0, thread_id: detailStatic?.comic?.thread_id ?? 0, page: -1), model: CommentListMode.self) { (commentList) in
+            ApiProvider.request(MJApi.commentList(object_id: detailStatic?.comic?.comic_id ?? 0, thread_id: detailStatic?.comic?.thread_id ?? 0, page: -1), model: CommentListMode.self) { (commentList) in
                 
                 self?.commentVC.commentList = commentList
+                group.leave()
             }
             
+        }
+        group.enter()
+        ApiProvider.request(MJApi.guessLike, model: GuessLikeModel.self) { (guessData) in
+            self.detailVC.guessLike = guessData
+            group.leave()
+        }
+        
+        group.notify(queue: DispatchQueue.main) {
+            self.detailVC.reloadData()
         }
         
         addChild(pageVC)

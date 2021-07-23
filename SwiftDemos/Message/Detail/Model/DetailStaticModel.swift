@@ -124,3 +124,19 @@ struct CommentModel: HandyJSON {
     var vip_exp: Int = 0
 }
 
+struct GuessLikeModel: HandyJSON {
+    
+    var normal: Bool = false
+    var last_modified: Int = 0
+    var comics: [BookModel]?
+}
+
+struct BookModel: HandyJSON {
+    
+    var comic_id: Int = 0
+    var name: String?
+    var cover: String?
+    var short_description: String?
+    var ori_cover: String?
+    var new_comic: Bool = false
+}

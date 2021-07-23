@@ -9,21 +9,69 @@ import UIKit
 
 class ContentDetailViewController: MJBaseViewController {
 
+    var detailStatic: DetailStaticModel?
+    var guessLike: GuessLikeModel?
+    
+    private lazy var tableView: UITableView = {
+        let tab = UITableView(frame: .zero, style: .plain)
+        tab.backgroundColor = UIColor.white
+        tab.delegate = self
+        tab.dataSource = self
+        tab.separatorStyle = .none
+        tab.register(DescriptionTabCell.self, forCellReuseIdentifier: "desCellId")
+        tab.register(GuessLikeTabCell.self, forCellReuseIdentifier: "guessId")
+        return tab
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .white
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view.usnp.edges)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func reloadData() {
+        tableView.reloadData()
     }
-    */
 
+}
+
+extension ContentDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return detailStatic != nil ? 2 : 0
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return DescriptionTabCell.heightt(detailStatic: detailStatic)
+        }
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "desCellId", for: indexPath) as! DescriptionTabCell
+            cell.model = detailStatic
+            cell.selectionStyle = .none
+            return cell
+        }else{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "guessId", for: indexPath) as! GuessLikeTabCell
+            cell.model = guessLike
+            cell.didSelectClosure { (comic) in
+                print(comic.name as Any)
+            }
+            return cell
+        }
+    }
+    
 }
