@@ -9,6 +9,8 @@ import UIKit
 
 class ContentDetailViewController: MJBaseViewController {
 
+    weak var delegate: ComicViewWillEndDraggingDelegate?
+    
     var detailStatic: DetailStaticModel?
     var guessLike: GuessLikeModel?
     
@@ -41,6 +43,11 @@ class ContentDetailViewController: MJBaseViewController {
 }
 
 extension ContentDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        delegate?.comicViewWillEndDragging(scrollView)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return detailStatic != nil ? 2 : 0
     }

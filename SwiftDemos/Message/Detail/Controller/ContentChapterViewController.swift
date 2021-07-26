@@ -13,7 +13,7 @@ class ContentChapterViewController: MJBaseViewController {
     
     var detailStatic: DetailStaticModel?
     
-    var delegate: ComicViewWillEndDraggingDelegate?
+    weak var delegate: ComicViewWillEndDraggingDelegate?
     
     
     lazy var collectionView: UICollectionView = {

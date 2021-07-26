@@ -80,6 +80,8 @@
 		8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */; };
 		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
+		8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */; };
+		8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */; };
 		8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1644A2694410A00F96808 /* Tabbar.swift */; };
 		8EE1645D26945B5200F96808 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1645C26945B5200F96808 /* API.swift */; };
 		8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1646426945E2B00F96808 /* MessageViewController.swift */; };
@@ -202,6 +204,8 @@
 		8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeCollectionCell.swift; sourceTree = "<group>"; };
 		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderView.swift; sourceTree = "<group>"; };
+		8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		8EE1644A2694410A00F96808 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		8EE1645C26945B5200F96808 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8EE1646426945E2B00F96808 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -477,6 +481,7 @@
 				8EB660D426AA679700EE506D /* DescriptionTabCell.swift */,
 				8EB660D926AA92E000EE506D /* GuessLikeTabCell.swift */,
 				8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */,
+				8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				8EE164A926958D5F00F96808 /* UIColorExtension.swift */,
 				8EE165572697E6D900F96808 /* MJGlobal.swift */,
 				8E228C19269C19C30012BF18 /* MJAPI.swift */,
+				8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -773,9 +779,11 @@
 				8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */,
 				8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */,
 				8EAB1373268EB0EC00DEB5B1 /* MJBaseViewController.swift in Sources */,
+				8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */,
 				8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */,
 				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
 				8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */,
+				8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
 				8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */,
 				8EAB138A268EB72E00DEB5B1 /* WeatherModel.swift in Sources */,

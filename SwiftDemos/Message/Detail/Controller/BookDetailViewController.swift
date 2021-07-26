@@ -16,16 +16,17 @@ class BookDetailViewController: MJBaseViewController {
 
     private lazy var detailVC: ContentDetailViewController = {
         let detailVC = ContentDetailViewController()
+        detailVC.delegate = self
         return detailVC
     }()
     
-    lazy var chapterVC: ContentChapterViewController = {
+    private lazy var chapterVC: ContentChapterViewController = {
         let chapterVC = ContentChapterViewController()
         chapterVC.delegate = self
         return chapterVC
     }()
     
-    lazy var commentVC: ContentCommentViewController = {
+    private lazy var commentVC: ContentCommentViewController = {
         let commentVC = ContentCommentViewController()
         commentVC.delegate = self
         return commentVC
@@ -35,8 +36,26 @@ class BookDetailViewController: MJBaseViewController {
         return MJPageViewController(titles: ["详情","目录","评论"], vcs: [detailVC, chapterVC, commentVC], pageStyle: .topTabBar)
     }()
     
+    private lazy var mainScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.delegate = self
+        return scrollView
+    }()
+    
+    private lazy var header: BookDetailHeaderView = {
+        return BookDetailHeaderView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: navigationBarY + 150))
+    }()
+    
+    private lazy var navigationBarY: CGFloat = {
+        return navigationController?.navigationBar.frame.maxY ?? 0
+    }()
+    
+    private var detailStatic: DetailStaticModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
         
         let group = DispatchGroup()
         
@@ -44,13 +63,17 @@ class BookDetailViewController: MJBaseViewController {
         view.backgroundColor = UIColor.background
         ApiLoadingProvider.request(MJApi.detailStatic(comicid: 3166), model: DetailStaticModel.self) { [weak self] (detailStatic) in
             
+            self?.detailStatic = detailStatic
+            
             let name = detailStatic?.comic?.name ?? "-"
             self?.title = name
-            
+        
             self?.detailVC.detailStatic = detailStatic
 //            self?.detailVC.reloadData()
             self?.chapterVC.detailStatic = detailStatic
             self?.commentVC.detailStatic = detailStatic
+            
+            self?.header.comicStatic = detailStatic?.comic
             
             ApiProvider.request(MJApi.commentList(object_id: detailStatic?.comic?.comic_id ?? 0, thread_id: detailStatic?.comic?.thread_id ?? 0, page: -1), model: CommentListMode.self) { (commentList) in
                 
@@ -69,19 +92,65 @@ class BookDetailViewController: MJBaseViewController {
             self.detailVC.reloadData()
         }
         
+    }
+    
+    override func configNavigationBar() {
+        super.configNavigationBar()
+        navigationController?.barStyle(.clear)
+        mainScrollView.contentOffset = CGPoint(x: 0, y: -mainScrollView.parallaxHeader.height)
+    }
+    
+    
+    private func setupUI() {
+        
+        view.addSubview(mainScrollView)
+        mainScrollView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view.usnp.edges).priority(.low)
+            make.top.equalToSuperview()
+        }
+        
+        let contentView = UIView()
+        mainScrollView.addSubview(contentView)
+        contentView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalToSuperview().offset(-navigationBarY)
+        }
+        
         addChild(pageVC)
-        view.addSubview(pageVC.view)
+        contentView.addSubview(pageVC.view)
         pageVC.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         
+        mainScrollView.parallaxHeader.view = header
+        mainScrollView.parallaxHeader.height = navigationBarY + 150
+        mainScrollView.parallaxHeader.minimumHeight = navigationBarY
+        mainScrollView.parallaxHeader.mode = .fill
     }
 }
 
 extension BookDetailViewController: ComicViewWillEndDraggingDelegate {
     
     func comicViewWillEndDragging(_ scrollView: UIScrollView) {
-        print("333")
+        print(scrollView.contentOffset.y)
+        if scrollView.contentOffset.y > 0 {
+            mainScrollView.setContentOffset(CGPoint(x: 0, y: -self.mainScrollView.parallaxHeader.minimumHeight), animated: true)
+        }else if scrollView.contentOffset.y < 0 {
+            mainScrollView.setContentOffset(CGPoint(x: 0, y: -mainScrollView.parallaxHeader.height), animated: true)
+        }
     }
     
+}
+
+extension BookDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y >= -scrollView.parallaxHeader.minimumHeight {
+            navigationController?.barStyle(.theme)
+            navigationItem.title = detailStatic?.comic?.name
+        }else {
+            navigationController?.barStyle(.clear)
+            navigationItem.title = ""
+        }
+    }
 }
