@@ -69,9 +69,10 @@ class BookDetailViewController: MJBaseViewController {
             self?.title = name
         
             self?.detailVC.detailStatic = detailStatic
-//            self?.detailVC.reloadData()
             self?.chapterVC.detailStatic = detailStatic
             self?.commentVC.detailStatic = detailStatic
+            
+            self?.chapterVC.reloadData()
             
             self?.header.comicStatic = detailStatic?.comic
             
@@ -89,9 +90,15 @@ class BookDetailViewController: MJBaseViewController {
         }
         
         group.notify(queue: DispatchQueue.main) {
-            self.detailVC.reloadData()
+//            self?.detailVC.reloadData()
+//            self.chapterVC.reloadData()
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.changeOrientationTo(landscapeRight: false)
     }
     
     override func configNavigationBar() {

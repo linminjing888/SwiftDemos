@@ -53,7 +53,7 @@ class MJPageViewController: MJBaseViewController {
         
         self.addChild(pageVC)
         view.addSubview(pageVC.view)
-        pageVC.setViewControllers([vcs[0]], direction: .forward, animated: false, completion: nil)
+        pageVC.setViewControllers([vcs[1]], direction: .forward, animated: false, completion: nil)
         pageVC.delegate = self
         pageVC.dataSource = self
         
@@ -100,7 +100,7 @@ class MJPageViewController: MJBaseViewController {
         guard let titles = titles else { return }
         
         segment.sectionTitles = titles
-        currentSelectIndex = 0
+        currentSelectIndex = 1
         segment.selectedSegmentIndex = UInt(currentSelectIndex)
     }
     

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    var maskView: UIView!
     var animationView: UIView!
     
+    // 申明手机屏幕旋转方向
+    var orientation: UIInterfaceOrientationMask = .portrait
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
@@ -62,6 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return orientation
+    }
 }
 
 extension AppDelegate : CAAnimationDelegate {
@@ -71,6 +77,21 @@ extension AppDelegate : CAAnimationDelegate {
         animationView.removeFromSuperview()
         backgroundView.removeFromSuperview()
 
+    }
+}
+
+extension UIApplication {
+    class func changeOrientationTo(landscapeRight: Bool) {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        if landscapeRight == true {
+            delegate.orientation = .landscapeRight
+            UIApplication.shared.supportedInterfaceOrientations(for: delegate.window)
+            UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+        }else {
+            delegate.orientation = .portrait
+            UIApplication.shared.supportedInterfaceOrientations(for: delegate.window)
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        }
     }
 }
 

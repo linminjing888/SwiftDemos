@@ -42,6 +42,10 @@ class ContentChapterViewController: MJBaseViewController {
             make.edges.equalTo(self.view.usnp.edges)
         }
     }
+    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 
 }
 
@@ -84,8 +88,11 @@ extension ContentChapterViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let index = indexPath.row
-        print(index)
+  
+        let index = isPositive ? indexPath.row : (detailStatic?.chapter_list?.count)! - indexPath.row - 1
+        let VC = ChapterReadViewController(detailStatic: detailStatic, selectIndex: index)
+        navigationController?.pushViewController(VC, animated: true)
+        
     }
     
 }

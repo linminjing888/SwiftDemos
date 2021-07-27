@@ -82,6 +82,9 @@
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
 		8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */; };
 		8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */; };
+		8EDBA52B26AFB76C0094EB32 /* ChapterReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */; };
+		8EDBA53026AFBB410094EB32 /* ReadTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52F26AFBB410094EB32 /* ReadTopBarView.swift */; };
+		8EDBA53526AFBC970094EB32 /* ReadBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA53426AFBC970094EB32 /* ReadBottomBarView.swift */; };
 		8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1644A2694410A00F96808 /* Tabbar.swift */; };
 		8EE1645D26945B5200F96808 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1645C26945B5200F96808 /* API.swift */; };
 		8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1646426945E2B00F96808 /* MessageViewController.swift */; };
@@ -206,6 +209,9 @@
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderView.swift; sourceTree = "<group>"; };
 		8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterReadViewController.swift; sourceTree = "<group>"; };
+		8EDBA52F26AFBB410094EB32 /* ReadTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTopBarView.swift; sourceTree = "<group>"; };
+		8EDBA53426AFBC970094EB32 /* ReadBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBottomBarView.swift; sourceTree = "<group>"; };
 		8EE1644A2694410A00F96808 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		8EE1645C26945B5200F96808 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8EE1646426945E2B00F96808 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -502,9 +508,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8EDBA52926AFB7460094EB32 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */,
+				8EDBA52F26AFBB410094EB32 /* ReadTopBarView.swift */,
+				8EDBA53426AFBC970094EB32 /* ReadBottomBarView.swift */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
 		8EE1645B26945AEC00F96808 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				8EDBA52926AFB7460094EB32 /* Read */,
 				8E228C1F269C36BB0012BF18 /* Detail */,
 				8E228C1E269C369A0012BF18 /* Message */,
 			);
@@ -774,6 +791,7 @@
 			files = (
 				8EE164DB2696A68E00F96808 /* ParallaxHeader.swift in Sources */,
 				8EAB1385268EB69D00DEB5B1 /* WeatherViewController.swift in Sources */,
+				8EDBA53026AFBB410094EB32 /* ReadTopBarView.swift in Sources */,
 				8EB660D526AA679700EE506D /* DescriptionTabCell.swift in Sources */,
 				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */,
@@ -782,9 +800,11 @@
 				8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */,
 				8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */,
 				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
+				8EDBA52B26AFB76C0094EB32 /* ChapterReadViewController.swift in Sources */,
 				8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */,
 				8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
+				8EDBA53526AFBC970094EB32 /* ReadBottomBarView.swift in Sources */,
 				8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */,
 				8EAB138A268EB72E00DEB5B1 /* WeatherModel.swift in Sources */,
 				8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */,
