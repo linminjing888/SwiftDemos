@@ -47,6 +47,9 @@ enum MJApi {
     case commentList(object_id: Int, thread_id: Int, page: Int)
     //猜你喜欢
     case guessLike
+    //章节内容
+    case chapter(chapter_id: Int)
+    
     //详情(实时)
     case detailRealtime(comicid: Int)
     //搜索结果
@@ -64,6 +67,7 @@ extension MJApi: TargetType {
         case .detailStatic: return "comic/detail_static_new"
         case .commentList: return "comment/list"
         case .guessLike: return "comic/guessLike"
+        case .chapter: return "comic/chapterNew"
             
         case .detailRealtime: return "comic/detail_realtime"
         case .searchResult: return "search/searchResult"
@@ -89,6 +93,8 @@ extension MJApi: TargetType {
             parmeters["object_id"] = object_id
             parmeters["thread_id"] = thread_id
             parmeters["page"] = page
+        case .chapter(let chapter_id):
+            parmeters["chapter_id"] = chapter_id
             
         case .searchResult(let argCon, let q):
             parmeters["argCon"] = argCon

@@ -40,7 +40,29 @@ class ChapterReadViewController: MJBaseViewController {
         tap.numberOfTapsRequired = 1
         scrollView.addGestureRecognizer(tap)
         
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapAction))
+        doubleTap.numberOfTapsRequired = 2
+        scrollView.addGestureRecognizer(doubleTap)
+        
+        tap.require(toFail: doubleTap)
+        
         return scrollView
+    }()
+    
+    private lazy var collectionView: UICollectionView = {
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = UIColor.background
+        collection.delegate = self
+        collection.dataSource = self
+        
+        collection.register(ReadCollectionViewCell.self, forCellWithReuseIdentifier: "readId")
+        
+        return collection
     }()
     
     lazy var topBar: ReadTopBarView = {
@@ -60,11 +82,13 @@ class ChapterReadViewController: MJBaseViewController {
     private var isLandscapeRight: Bool! {
         didSet {
             UIApplication.changeOrientationTo(landscapeRight: isLandscapeRight)
+            collectionView.reloadData()
         }
     }
     
     private var detailStatic: DetailStaticModel?
     private var selectIndex: Int = 0
+    private var chapterList = [ChapterModel]()
     
     convenience init(detailStatic: DetailStaticModel?, selectIndex: Int) {
         self.init()
@@ -76,6 +100,7 @@ class ChapterReadViewController: MJBaseViewController {
         super.viewDidLoad()
 
         setupUI()
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,6 +119,12 @@ class ChapterReadViewController: MJBaseViewController {
             make.edges.equalTo(self.view.usnp.edges)
         }
         
+        backScrollView.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+            make.width.height.equalTo(backScrollView)
+        }
+        
         view.addSubview(topBar)
         topBar.snp.makeConstraints { (make) in
             make.left.top.right.equalTo(backScrollView)
@@ -105,6 +136,19 @@ class ChapterReadViewController: MJBaseViewController {
             make.left.bottom.right.equalTo(backScrollView)
             make.height.equalTo(120)
         }
+    }
+    
+    private func loadData() {
+        guard let detailStatic = detailStatic else { return }
+        topBar.titleLbl.text = detailStatic.comic?.name
+        
+        guard let chapterId = detailStatic.chapter_list?[selectIndex].chapter_id else { return }
+        ApiLoadingProvider.request(MJApi.chapter(chapter_id: chapterId), model: ChapterModel.self) { (returnData) in
+            guard let chapter = returnData else { return }
+            self.chapterList.append(chapter)
+            self.collectionView.reloadData()
+        }
+        
     }
     
     @objc private func backAction() {
@@ -123,10 +167,67 @@ class ChapterReadViewController: MJBaseViewController {
     @objc private func tapAction() {
         isBarHidden = !isBarHidden
     }
+    
+    @objc private func doubleTapAction() {
+        var zoomScale = backScrollView.zoomScale
+        print(zoomScale)
+        zoomScale = 2.5 - zoomScale // 取反
+        let width = view.frame.width / zoomScale
+        let height = view.frame.height / zoomScale
+        let zoomRect = CGRect(x: backScrollView.center.x - width / 2, y: backScrollView.center.y - height / 2, width: width, height: height)
+        backScrollView.zoom(to: zoomRect, animated: true)
+        
+    }
 
 }
 
 
 extension ChapterReadViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isBarHidden == false {
+            isBarHidden = true
+        }
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        if scrollView == backScrollView {
+            return collectionView
+        }else{
+            return nil
+        }
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        if scrollView == backScrollView {
+            scrollView.contentSize = CGSize(width: scrollView.frame.width * scrollView.zoomScale, height: scrollView.frame.height * scrollView.zoomScale)
+        }
+    }
+}
+
+extension ChapterReadViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return chapterList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return chapterList[section].image_list?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "readId", for: indexPath) as! ReadCollectionViewCell
+        cell.model = chapterList[indexPath.section].image_list?[indexPath.row]
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let imageModel = chapterList[indexPath.section].image_list?[indexPath.row] else { return CGSize.zero }
+        let width = backScrollView.frame.width
+        let height = floor(width / CGFloat(imageModel.width) * CGFloat(imageModel.height))
+        return CGSize(width: width, height: height)
+    }
+    
+    
     
 }

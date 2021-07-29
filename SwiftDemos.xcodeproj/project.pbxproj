@@ -85,6 +85,7 @@
 		8EDBA52B26AFB76C0094EB32 /* ChapterReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */; };
 		8EDBA53026AFBB410094EB32 /* ReadTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52F26AFBB410094EB32 /* ReadTopBarView.swift */; };
 		8EDBA53526AFBC970094EB32 /* ReadBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA53426AFBC970094EB32 /* ReadBottomBarView.swift */; };
+		8EDBA54326B12DDA0094EB32 /* ReadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA54226B12DDA0094EB32 /* ReadCollectionViewCell.swift */; };
 		8EE1644B2694410A00F96808 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1644A2694410A00F96808 /* Tabbar.swift */; };
 		8EE1645D26945B5200F96808 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1645C26945B5200F96808 /* API.swift */; };
 		8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1646426945E2B00F96808 /* MessageViewController.swift */; };
@@ -212,6 +213,7 @@
 		8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterReadViewController.swift; sourceTree = "<group>"; };
 		8EDBA52F26AFBB410094EB32 /* ReadTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTopBarView.swift; sourceTree = "<group>"; };
 		8EDBA53426AFBC970094EB32 /* ReadBottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBottomBarView.swift; sourceTree = "<group>"; };
+		8EDBA54226B12DDA0094EB32 /* ReadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EE1644A2694410A00F96808 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		8EE1645C26945B5200F96808 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8EE1646426945E2B00F96808 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */,
+				8EDBA54226B12DDA0094EB32 /* ReadCollectionViewCell.swift */,
 				8EDBA52F26AFBB410094EB32 /* ReadTopBarView.swift */,
 				8EDBA53426AFBC970094EB32 /* ReadBottomBarView.swift */,
 			);
@@ -834,6 +837,7 @@
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
 				8EB660DA26AA92E000EE506D /* GuessLikeTabCell.swift in Sources */,
+				8EDBA54326B12DDA0094EB32 /* ReadCollectionViewCell.swift in Sources */,
 				8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
 				8EE1652E2696EFAE00F96808 /* TransDetailViewController.swift in Sources */,
