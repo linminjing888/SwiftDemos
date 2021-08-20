@@ -11,6 +11,8 @@
 		8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C19269C19C30012BF18 /* MJAPI.swift */; };
 		8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C20269C36D90012BF18 /* BookDetailViewController.swift */; };
 		8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */; };
+		8E75BDEF26CF94C200F91E32 /* ReverseValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */; };
+		8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */; };
 		8E848F852694380300520E28 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F842694380300520E28 /* TabbarViewController.swift */; };
 		8E848F9926943C6900520E28 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F9826943C6900520E28 /* MyViewController.swift */; };
 		8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */; };
@@ -133,6 +135,8 @@
 		8E228C19269C19C30012BF18 /* MJAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJAPI.swift; sourceTree = "<group>"; };
 		8E228C20269C36D90012BF18 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStaticModel.swift; sourceTree = "<group>"; };
+		8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueViewController.swift; sourceTree = "<group>"; };
+		8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTwoViewController.swift; sourceTree = "<group>"; };
 		8E848F842694380300520E28 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		8E848F9826943C6900520E28 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		8EAB1326268EAA9E00DEB5B1 /* SwiftDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,6 +410,8 @@
 				8EC317232692D22A00DE462C /* PickerViewController.swift */,
 				8EE1650C2696E84C00F96808 /* TransitionViewController.swift */,
 				8EE1652D2696EFAE00F96808 /* TransDetailViewController.swift */,
+				8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */,
+				8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -804,6 +810,7 @@
 				8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */,
 				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
 				8EDBA52B26AFB76C0094EB32 /* ChapterReadViewController.swift in Sources */,
+				8E75BDEF26CF94C200F91E32 /* ReverseValueViewController.swift in Sources */,
 				8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */,
 				8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
@@ -819,6 +826,7 @@
 				8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */,
 				8E848F852694380300520E28 /* TabbarViewController.swift in Sources */,
 				8EE1648426955AB700F96808 /* Item.swift in Sources */,
+				8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */,
 				8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */,
 				8E848F9926943C6900520E28 /* MyViewController.swift in Sources */,
 				8EAB136B268EB08F00DEB5B1 /* FontViewController.swift in Sources */,

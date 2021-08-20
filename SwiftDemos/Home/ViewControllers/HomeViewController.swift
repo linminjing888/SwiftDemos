@@ -18,7 +18,7 @@ class HomeViewController: MJBaseViewController {
         view.backgroundColor = UIColor.white
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue"]
         
         setupUI()
     }
@@ -79,6 +79,9 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 6 {
             let vc = TransitionViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 7 {
+            let vc = ReverseValueViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

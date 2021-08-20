@@ -34,7 +34,7 @@ class StretchyViewController: MJBaseViewController {
     func setupUI() {
         let bannerH = self.view.frame.width * 1068 / 1600
         
-        tableView = UITableView(frame: CGRect(x: 0, y: nav_bar_h + bannerH + 10, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - nav_bar_h - bannerH - 10))
+        tableView = UITableView(frame: CGRect(x: 0, y: bannerH + 10, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - nav_bar_h - bannerH - 10))
         self.view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,7 +42,7 @@ class StretchyViewController: MJBaseViewController {
         tableView.tableFooterView = UIView()
 
         bannerImgVi = UIImageView(image: UIImage(named: "banner"))
-        bannerImgVi.frame = CGRect(x: 0, y: nav_bar_h, width: SCREEN_WIDTH, height: bannerH)
+        bannerImgVi.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: bannerH)
         self.view.addSubview(bannerImgVi)
         
     }

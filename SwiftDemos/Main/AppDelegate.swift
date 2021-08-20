@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = TabbarViewController()
         window?.makeKeyAndVisible()
         
-        /**
+        
         backgroundView = UIView(frame: self.window!.frame)
         backgroundView.backgroundColor = UIColor(red: 29 / 255.0, green: 161 / 255.0, blue: 242 / 255.0, alpha: 1)
         self.window!.addSubview(backgroundView)
@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         logoAnimation.timingFunctions = [CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut),CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)]
         logoAnimation.fillMode = CAMediaTimingFillMode.forwards
         logoLayer.add(logoAnimation, forKey: "zoomAnimation")
-        */
+        
 
 //        let logoOpacityAnimation = CABasicAnimation(keyPath: "opacity")
 //        logoOpacityAnimation.beginTime = CACurrentMediaTime() + 0.5
