@@ -9,6 +9,10 @@ import UIKit
 
 typealias SwiftBlock = (String) -> Void
 
+protocol ValueDelegate: class {
+    func ReverseValueFinished(value: String)
+}
+
 class ReverseValueTwoViewController: MJBaseViewController {
 
     private lazy var textField: UITextField = {
@@ -30,6 +34,8 @@ class ReverseValueTwoViewController: MJBaseViewController {
     }()
     
     var finishBlock: SwiftBlock?
+    weak var delegate: ValueDelegate?
+    var titleStr: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +54,14 @@ class ReverseValueTwoViewController: MJBaseViewController {
             make.centerX.equalToSuperview()
         }
         
+        if let text = titleStr {
+            if text.contains("闭包：") {
+                textField.text = text.replacingOccurrences(of: "闭包：", with: "")
+            }else{
+                textField.text = text
+            }
+        }
+        
     }
     
     @objc fileprivate func finishAction() {
@@ -55,6 +69,7 @@ class ReverseValueTwoViewController: MJBaseViewController {
         let text = textField.text ?? ""
         print(text)
         finishBlock?(text)
+        delegate?.ReverseValueFinished(value: text)
         navigationController?.popViewController(animated: true)
     }
 
