@@ -70,6 +70,8 @@ class ReverseValueTwoViewController: MJBaseViewController {
         print(text)
         finishBlock?(text)
         delegate?.ReverseValueFinished(value: text)
+        SingleManager.shared.aValue = text
+        NotificationCenter.default.post(name: NSNotification.Name("textChangeKey"), object: nil, userInfo: ["text": text])
         navigationController?.popViewController(animated: true)
     }
 

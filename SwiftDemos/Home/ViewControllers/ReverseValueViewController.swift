@@ -19,6 +19,22 @@ class ReverseValueViewController: MJBaseViewController {
         lbl.text = "456"
         return lbl
     }()
+    lazy var sexLbl: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "789"
+        return lbl
+    }()
+    lazy var cityLbl: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "222"
+        return lbl
+    }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let aa = SingleManager.shared.aValue else { return }
+        sexLbl.text = "单例：\(aa)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +46,8 @@ class ReverseValueViewController: MJBaseViewController {
         
         view.addSubview(nameLbl)
         nameLbl.snp.makeConstraints { (make) in
-            make.centerX.centerY.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-60)
             make.height.equalTo(20)
         }
         view.addSubview(ageLbl)
@@ -39,6 +56,20 @@ class ReverseValueViewController: MJBaseViewController {
             make.top.equalTo(nameLbl.snp.bottom).offset(20);
             make.height.equalTo(20)
         }
+        view.addSubview(sexLbl)
+        sexLbl.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(ageLbl.snp.bottom).offset(20);
+            make.height.equalTo(20)
+        }
+        view.addSubview(cityLbl)
+        cityLbl.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(sexLbl.snp.bottom).offset(20);
+            make.height.equalTo(20)
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(notifiAction), name: NSNotification.Name(rawValue: "textChangeKey"), object: nil)
     }
     
     @objc func nextAction() {
@@ -50,7 +81,15 @@ class ReverseValueViewController: MJBaseViewController {
         vc.titleStr = self.nameLbl.text
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @objc func notifiAction(notifi: Notification) {
+        let str = notifi.userInfo!["text"]
+        self.cityLbl.text = "通知：\(str ?? "")"
+    }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension ReverseValueViewController: ValueDelegate {

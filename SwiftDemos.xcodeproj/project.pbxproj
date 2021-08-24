@@ -82,6 +82,7 @@
 		8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */; };
 		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
+		8ED6006426D4993D00B8140E /* SingleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6006326D4993D00B8140E /* SingleManager.swift */; };
 		8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */; };
 		8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */; };
 		8EDBA52B26AFB76C0094EB32 /* ChapterReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */; };
@@ -212,6 +213,7 @@
 		8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeCollectionCell.swift; sourceTree = "<group>"; };
 		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		8ED6006326D4993D00B8140E /* SingleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleManager.swift; sourceTree = "<group>"; };
 		8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderView.swift; sourceTree = "<group>"; };
 		8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		8EDBA52A26AFB76C0094EB32 /* ChapterReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterReadViewController.swift; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 				8EE165572697E6D900F96808 /* MJGlobal.swift */,
 				8E228C19269C19C30012BF18 /* MJAPI.swift */,
 				8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */,
+				8ED6006326D4993D00B8140E /* SingleManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -841,6 +844,7 @@
 				8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */,
 				8EB6604E26A6B46400EE506D /* ContentChapterViewController.swift in Sources */,
 				8EB660D026A95FCB00EE506D /* CommentListTabCell.swift in Sources */,
+				8ED6006426D4993D00B8140E /* SingleManager.swift in Sources */,
 				8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
