@@ -70,4 +70,33 @@ extension UIColor {
         return UIColor(r: r, g: g, b: b)
     }
     
+    
+    /// 便利构造函数
+    /// - Parameters:
+    ///   - lightThemeColor: 明亮主题的颜色
+    ///   - darkThemeColor: 黑暗主题的颜色
+    public convenience init(lightThemeColor: UIColor, darkThemeColor: UIColor? = nil){
+        if #available(iOS 13.0, *) {
+            self.init { (traitCollection) -> UIColor in
+                switch traitCollection.userInterfaceStyle {
+                case .light:
+                    return lightThemeColor
+                case .unspecified:
+                    return lightThemeColor
+                case .dark:
+                    return darkThemeColor ?? lightThemeColor
+                @unknown default:
+                    fatalError()
+                }
+            }
+        }else {
+            self.init(cgColor: lightThemeColor.cgColor);
+        }
+    }
+    
+    static let mainTextColor = UIColor(lightThemeColor: .black, darkThemeColor: .white)
+    
+    static let mainBgColor = UIColor(lightThemeColor: .white, darkThemeColor: .black);
+    
+    static let mainTabBgColor = UIColor(lightThemeColor: UIColor(r: 242, g: 242, b: 242), darkThemeColor: .black.withAlphaComponent(0.8))
 }

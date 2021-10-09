@@ -18,7 +18,7 @@ class GuessLikeCollectionCell: UICollectionViewCell {
     
     private lazy var titleLbl: UILabel = {
         let titleLbl = UILabel()
-        titleLbl.textColor = UIColor.black
+        titleLbl.textColor = UIColor.mainTextColor
         titleLbl.font = UIFont.systemFont(ofSize: 14)
         return titleLbl
     }()

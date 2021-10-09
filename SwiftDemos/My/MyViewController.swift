@@ -29,7 +29,7 @@ class MyViewController: MJBaseViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.backgroundColor = UIColor.background
+        tableView.backgroundColor = .mainTabBgColor // UIColor.background
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)

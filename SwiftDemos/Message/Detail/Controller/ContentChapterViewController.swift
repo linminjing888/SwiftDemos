@@ -24,7 +24,7 @@ class ContentChapterViewController: MJBaseViewController {
         layout.itemSize = CGSize(width: (SCREEN_WIDTH - 30)/2, height: 40)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.mainBgColor
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(ChapterCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerId")
@@ -35,7 +35,7 @@ class ContentChapterViewController: MJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .mainBgColor
         
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in

@@ -16,7 +16,7 @@ class ContentDetailViewController: MJBaseViewController {
     
     private lazy var tableView: UITableView = {
         let tab = UITableView(frame: .zero, style: .plain)
-        tab.backgroundColor = UIColor.white
+        tab.backgroundColor = UIColor.mainBgColor
         tab.delegate = self
         tab.dataSource = self
         tab.separatorStyle = .none
@@ -28,7 +28,7 @@ class ContentDetailViewController: MJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .mainBgColor
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in

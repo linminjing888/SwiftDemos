@@ -14,8 +14,17 @@ class TabbarViewController: UITabBarController {
         
         setValue(Tabbar(), forKeyPath: "tabBar") // KVO
         
-        tabBar.barTintColor = UIColor.white
-//        tabBar.isTranslucent = false
+        if #available(iOS 15, *) {
+             let appearance = UITabBarAppearance()
+             appearance.configureWithOpaqueBackground()
+             appearance.backgroundColor = .mainBgColor
+             UITabBar.appearance().standardAppearance = appearance
+             UITabBar.appearance().scrollEdgeAppearance = appearance
+             UITabBar.appearance().tintColor = UIColor.orange
+        }else{
+            tabBar.barTintColor = UIColor.white
+            tabBar.isTranslucent = false
+        }
         
         addChild("首页", "tabbar_home", HomeViewController.self)
         addChild("消息", "tabbar_message_center", MessageViewController.self)

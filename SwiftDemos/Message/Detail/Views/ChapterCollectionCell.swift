@@ -26,7 +26,7 @@ class ChapterCollectionCell: UICollectionViewCell {
     }
     
     fileprivate func setupLayout() {
-        contentView.backgroundColor = UIColor.white
+        contentView.backgroundColor = UIColor.mainBgColor
         layer.cornerRadius = 5
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor

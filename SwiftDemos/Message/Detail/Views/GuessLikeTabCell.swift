@@ -18,7 +18,7 @@ class GuessLikeTabCell: UITableViewCell {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.background
+        collectionView.backgroundColor = UIColor.mainTabBgColor
         collectionView.isScrollEnabled = false
         collectionView.delegate = self
         collectionView.dataSource = self

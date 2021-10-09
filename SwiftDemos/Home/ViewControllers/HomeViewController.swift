@@ -15,7 +15,7 @@ class HomeViewController: MJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .mainTextColor
         self.title = "首页"
         
         dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue"]
@@ -26,7 +26,7 @@ class HomeViewController: MJBaseViewController {
     fileprivate func setupUI() {
         
         tableView = UITableView(frame: self.view.bounds, style: .plain)
-        tableView.backgroundColor = UIColor.white
+        tableView.backgroundColor = .mainBgColor
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()

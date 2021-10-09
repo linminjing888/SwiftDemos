@@ -25,7 +25,7 @@ class TransDetailViewController: MJBaseViewController {
         let textView = UITextView(frame: CGRect(x: 0, y: 410, width: self.view.frame.width, height: self.view.frame.height - 430 - nav_bar_h))
         textView.text = desText
         textView.font = UIFont.systemFont(ofSize: 20)
-        textView.textColor = UIColor.darkGray
+        textView.textColor = UIColor.mainTextColor
         self.view.addSubview(textView)
         
         self.navigationController?.delegate = self

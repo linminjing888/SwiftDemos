@@ -28,7 +28,7 @@ class CommentListTabCell: UITableViewCell {
         let textView = UITextView()
         textView.isUserInteractionEnabled = false
         textView.font = UIFont.systemFont(ofSize: 13)
-        textView.textColor = UIColor.black
+        textView.textColor = UIColor.mainTextColor
         return textView
     }()
 

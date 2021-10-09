@@ -19,7 +19,7 @@ class MessageTabCell: UITableViewCell {
     
     lazy var nickNameLbl: UILabel = {
         let nickNameLbl = UILabel()
-        nickNameLbl.textColor = UIColor.darkGray
+        nickNameLbl.textColor = .mainTextColor // UIColor.darkGray
         nickNameLbl.font = UIFont.systemFont(ofSize: 15)
         return nickNameLbl
     }()
