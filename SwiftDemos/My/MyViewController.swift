@@ -111,7 +111,19 @@ extension MyViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= -(scrollView.parallaxHeader.minimumHeight)  {
-            navigationController!.barStyle(.theme)
+            if #available(iOS 15.0, *) {
+                let navBarAppearance = UINavigationBarAppearance()
+                navBarAppearance.configureWithTransparentBackground() // 重置背景和阴影颜
+                navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+                navBarAppearance.backgroundImage = UIImage(named: "nav_bg");
+                navBarAppearance.shadowImage = UIImage();
+                
+                navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+                navigationController?.navigationBar.standardAppearance = navBarAppearance
+                self.navigationController?.navigationBar.isTranslucent = true;
+            }else{
+                navigationController?.barStyle(.theme)
+            }
             navigationItem.title = "我的"
         }else{
             navigationController!.barStyle(.clear)

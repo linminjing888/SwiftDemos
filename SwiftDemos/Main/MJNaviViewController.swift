@@ -60,21 +60,53 @@ extension UINavigationController {
 //    }
     
     func barStyle(_ style: NavigationBarStyle) {
-        switch style {
-        case .theme:
-            navigationBar.barStyle = .black
-            navigationBar.setBackgroundImage(UIImage(named: "nav_bg"), for: .default)
-            navigationBar.shadowImage = UIImage()
-        case .clear:
-            navigationBar.barStyle = .black
-            navigationBar.setBackgroundImage(UIImage(), for: .default)
-            navigationBar.shadowImage = UIImage()
-        case .white:
-            navigationBar.barStyle = .default
-            navigationBar.setBackgroundImage(UIColor.white.image(), for: .default)
-            navigationBar.shadowImage = nil
+        
+        if #available(iOS 15.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithTransparentBackground() // 重置背景和阴影颜
+
+            navBarAppearance.shadowImage = UIImage()
+            navBarAppearance.backgroundColor = UIColor.clear
+            navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            
+            switch style {
+                case .theme:
+                    navigationBar.barStyle = .black
+                    navBarAppearance.backgroundImage = UIImage(named: "nav_bg");
+                    navBarAppearance.shadowImage = UIImage();
+                self.navigationBar.isTranslucent = false;
+                case .clear:
+                    navigationBar.barStyle = .black
+                    navBarAppearance.backgroundImage = UIColor.clear.image();
+                    navBarAppearance.shadowImage = UIColor.clear.image();
+                    self.navigationBar.isTranslucent = true;
+                case .white:
+                    navigationBar.barStyle = .default
+                    navBarAppearance.backgroundImage = UIColor.white.image();
+                    navBarAppearance.shadowImage = UIImage();
+                    self.navigationBar.isTranslucent = false;
+            }
+            
+            self.navigationBar.scrollEdgeAppearance = navBarAppearance
+            self.navigationBar.standardAppearance = navBarAppearance
+
+        }else{
+            switch style {
+                case .theme:
+                    navigationBar.barStyle = .black
+                    navigationBar.setBackgroundImage(UIImage(named: "nav_bg"), for: .default)
+                    navigationBar.shadowImage = UIImage()
+                case .clear:
+                    navigationBar.barStyle = .black
+                    navigationBar.setBackgroundImage(UIImage(), for: .default)
+                    navigationBar.shadowImage = UIImage()
+                case .white:
+                    navigationBar.barStyle = .default
+                    navigationBar.setBackgroundImage(UIColor.white.image(), for: .default)
+                    navigationBar.shadowImage = nil
+            }
         }
-        
-        
+
     }
+
 }
