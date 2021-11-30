@@ -11,6 +11,7 @@
 		8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C19269C19C30012BF18 /* MJAPI.swift */; };
 		8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C20269C36D90012BF18 /* BookDetailViewController.swift */; };
 		8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */; };
+		8E742DEE2755FB060062C219 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E742DED2755FB060062C219 /* CustomButton.swift */; };
 		8E75BDEF26CF94C200F91E32 /* ReverseValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */; };
 		8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */; };
 		8E848F852694380300520E28 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F842694380300520E28 /* TabbarViewController.swift */; };
@@ -110,6 +111,7 @@
 		8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165322696F0DC00F96808 /* CustomPushTransition.swift */; };
 		8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165522696F85600F96808 /* CustomPopTransition.swift */; };
 		8EE165582697E6D900F96808 /* MJGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165572697E6D900F96808 /* MJGlobal.swift */; };
+		8EE6B2C7274F2C2000E77A52 /* SwiftCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,7 @@
 		8E228C19269C19C30012BF18 /* MJAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJAPI.swift; sourceTree = "<group>"; };
 		8E228C20269C36D90012BF18 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStaticModel.swift; sourceTree = "<group>"; };
+		8E742DED2755FB060062C219 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueViewController.swift; sourceTree = "<group>"; };
 		8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTwoViewController.swift; sourceTree = "<group>"; };
 		8E848F842694380300520E28 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +244,7 @@
 		8EE165322696F0DC00F96808 /* CustomPushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPushTransition.swift; path = SwiftDemos/Home/Models/CustomPushTransition.swift; sourceTree = SOURCE_ROOT; };
 		8EE165522696F85600F96808 /* CustomPopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopTransition.swift; sourceTree = "<group>"; };
 		8EE165572697E6D900F96808 /* MJGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJGlobal.swift; sourceTree = "<group>"; };
+		8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +418,7 @@
 				8EE1652D2696EFAE00F96808 /* TransDetailViewController.swift */,
 				8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */,
 				8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */,
+				8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				8EE165282696EDD000F96808 /* TransCollectionCell.swift */,
+				8E742DED2755FB060062C219 /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -805,6 +811,7 @@
 				8EAB1385268EB69D00DEB5B1 /* WeatherViewController.swift in Sources */,
 				8EDBA53026AFBB410094EB32 /* ReadTopBarView.swift in Sources */,
 				8EB660D526AA679700EE506D /* DescriptionTabCell.swift in Sources */,
+				8E742DEE2755FB060062C219 /* CustomButton.swift in Sources */,
 				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */,
 				8EE164D92696A68E00F96808 /* ParallaxHeaderMode.swift in Sources */,
@@ -848,6 +855,7 @@
 				8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */,
 				8EAB1360268EABDB00DEB5B1 /* MJMacro.swift in Sources */,
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
+				8EE6B2C7274F2C2000E77A52 /* SwiftCharacterViewController.swift in Sources */,
 				8EB660DA26AA92E000EE506D /* GuessLikeTabCell.swift in Sources */,
 				8EDBA54326B12DDA0094EB32 /* ReadCollectionViewCell.swift in Sources */,
 				8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */,

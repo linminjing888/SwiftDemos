@@ -9,7 +9,7 @@ import UIKit
 
 typealias SwiftBlock = (String) -> Void
 
-protocol ValueDelegate: class {
+protocol ValueDelegate: NSObjectProtocol {
     func ReverseValueFinished(value: String)
 }
 
