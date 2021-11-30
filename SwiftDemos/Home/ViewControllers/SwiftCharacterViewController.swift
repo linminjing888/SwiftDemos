@@ -17,16 +17,18 @@ class SwiftCharacterViewController: MJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let commitBtn = UIButton(type: .custom)
+        let commitBtn = CustomButton(type: .custom)
         commitBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         commitBtn.setTitleColor(.black, for: .normal)
         commitBtn.setTitle("123", for: .normal)
+        commitBtn.setImage(UIImage(named: "ant_icon"), for: .normal)
         commitBtn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        commitBtn.imagePosition(style: .top, spacing: 25)
         view.addSubview(commitBtn)
         commitBtn.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(100)
             make.centerX.equalToSuperview()
-            make.size.equalTo(CGSize(width: 80, height: 30))
+            make.size.equalTo(CGSize(width: 80, height: 80))
         }
         
         // 1.有条件的for循环
@@ -106,8 +108,8 @@ class SwiftCharacterViewController: MJBaseViewController {
     }
     
     @objc func btnAction() {
-        
-        self.BtnClosure!()
+        print("123456")
+        self.BtnClosure?()
     }
 }
 
