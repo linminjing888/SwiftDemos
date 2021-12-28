@@ -27,7 +27,7 @@ class MJFontViewController: MJBaseViewController {
             make.top.equalToSuperview().offset(nav_bar_h + 20)
         }
         
-        label.text = "Hello World"
+        label.text = "123456789"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 30)
         self.view.addSubview(label)
@@ -53,7 +53,7 @@ class MJFontViewController: MJBaseViewController {
         let count:Int = fontNameArr.count - 1
         let ran = Int.random(in: 0...count)
         label.font = UIFont(name: fontNameArr[ran], size: 30)
-        
+        print("==== \(fontNameArr[ran])")
         
     }
 

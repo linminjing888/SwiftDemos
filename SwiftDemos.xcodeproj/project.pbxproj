@@ -16,6 +16,7 @@
 		8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */; };
 		8E848F852694380300520E28 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F842694380300520E28 /* TabbarViewController.swift */; };
 		8E848F9926943C6900520E28 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F9826943C6900520E28 /* MyViewController.swift */; };
+		8E8958922774439C0038CE42 /* ClosureLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */; };
 		8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */; };
 		8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB132D268EAA9E00DEB5B1 /* HomeViewController.swift */; };
 		8EAB1331268EAA9E00DEB5B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB132F268EAA9E00DEB5B1 /* Main.storyboard */; };
@@ -143,6 +144,7 @@
 		8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTwoViewController.swift; sourceTree = "<group>"; };
 		8E848F842694380300520E28 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		8E848F9826943C6900520E28 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureLearnViewController.swift; sourceTree = "<group>"; };
 		8EAB1326268EAA9E00DEB5B1 /* SwiftDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EAB132D268EAA9E00DEB5B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */,
 				8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */,
 				8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */,
+				8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				8EE16479269551BD00F96808 /* Content.swift in Sources */,
 				8EE1650D2696E84C00F96808 /* TransitionViewController.swift in Sources */,
 				8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */,
+				8E8958922774439C0038CE42 /* ClosureLearnViewController.swift in Sources */,
 				8EE165242696ED8600F96808 /* TransitionModel.swift in Sources */,
 				8EE164D126969FBC00F96808 /* MJNaviViewController.swift in Sources */,
 				8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */,

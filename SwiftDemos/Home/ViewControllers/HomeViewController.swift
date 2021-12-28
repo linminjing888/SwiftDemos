@@ -18,7 +18,7 @@ class HomeViewController: MJBaseViewController {
         view.backgroundColor = .mainTextColor
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure"]
         
         setupUI()
     }
@@ -85,6 +85,9 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 8 {
             let vc = SwiftCharacterViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 9 {
+            let vc = ClosureLearnViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
