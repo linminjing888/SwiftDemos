@@ -112,6 +112,7 @@
 		8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165322696F0DC00F96808 /* CustomPushTransition.swift */; };
 		8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165522696F85600F96808 /* CustomPopTransition.swift */; };
 		8EE165582697E6D900F96808 /* MJGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE165572697E6D900F96808 /* MJGlobal.swift */; };
+		8EE3E4C8277B02E80087C2AC /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE3E4C7277B02E80087C2AC /* RxSwiftViewController.swift */; };
 		8EE6B2C7274F2C2000E77A52 /* SwiftCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -246,6 +247,7 @@
 		8EE165322696F0DC00F96808 /* CustomPushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPushTransition.swift; path = SwiftDemos/Home/Models/CustomPushTransition.swift; sourceTree = SOURCE_ROOT; };
 		8EE165522696F85600F96808 /* CustomPopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopTransition.swift; sourceTree = "<group>"; };
 		8EE165572697E6D900F96808 /* MJGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJGlobal.swift; sourceTree = "<group>"; };
+		8EE3E4C7277B02E80087C2AC /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,6 +424,7 @@
 				8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */,
 				8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */,
 				8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */,
+				8EE3E4C7277B02E80087C2AC /* RxSwiftViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */,
 				8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */,
 				8E848F9926943C6900520E28 /* MyViewController.swift in Sources */,
+				8EE3E4C8277B02E80087C2AC /* RxSwiftViewController.swift in Sources */,
 				8EAB136B268EB08F00DEB5B1 /* FontViewController.swift in Sources */,
 				8EE16479269551BD00F96808 /* Content.swift in Sources */,
 				8EE1650D2696E84C00F96808 /* TransitionViewController.swift in Sources */,

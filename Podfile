@@ -16,5 +16,7 @@ target 'SwiftDemos' do
   pod 'Moya', '~> 14.0'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'HMSegmentedControl'
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
   
 end
