@@ -90,7 +90,9 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
             let vc = ClosureLearnViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 10 {
-            let vc = RxSwiftViewController()
+//            let vc = RxSwiftViewController()
+//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = RxSwiftViewController2()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

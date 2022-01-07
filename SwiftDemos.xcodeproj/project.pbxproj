@@ -17,6 +17,14 @@
 		8E848F852694380300520E28 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F842694380300520E28 /* TabbarViewController.swift */; };
 		8E848F9926943C6900520E28 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E848F9826943C6900520E28 /* MyViewController.swift */; };
 		8E8958922774439C0038CE42 /* ClosureLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */; };
+		8E92A732278546690020B65B /* RxSwiftViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A731278546690020B65B /* RxSwiftViewController2.swift */; };
+		8E92A735278548580020B65B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A734278548580020B65B /* Protocols.swift */; };
+		8E92A737278575AF0020B65B /* GithubSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A736278575AF0020B65B /* GithubSignupViewModel.swift */; };
+		8E92A73C2785997A0020B65B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A73B2785997A0020B65B /* ActivityIndicator.swift */; };
+		8E92A73E27868F710020B65B /* DefaultImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A73D27868F710020B65B /* DefaultImplementations.swift */; };
+		8E92A74027868FCC0020B65B /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A73F27868FCC0020B65B /* Wireframe.swift */; };
+		8E92A742278690280020B65B /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A741278690280020B65B /* String+URL.swift */; };
+		8E92A744278697020020B65B /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92A743278697020020B65B /* BindingExtensions.swift */; };
 		8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */; };
 		8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB132D268EAA9E00DEB5B1 /* HomeViewController.swift */; };
 		8EAB1331268EAA9E00DEB5B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB132F268EAA9E00DEB5B1 /* Main.storyboard */; };
@@ -84,6 +92,7 @@
 		8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */; };
 		8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3171B2692B3B100DE462C /* StretchyViewController.swift */; };
 		8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC317232692D22A00DE462C /* PickerViewController.swift */; };
+		8EC8DE06278450ED00707BB6 /* RxSimpleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8DE05278450ED00707BB6 /* RxSimpleViewModel.swift */; };
 		8ED6006426D4993D00B8140E /* SingleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6006326D4993D00B8140E /* SingleManager.swift */; };
 		8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */; };
 		8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */; };
@@ -146,6 +155,14 @@
 		8E848F842694380300520E28 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		8E848F9826943C6900520E28 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureLearnViewController.swift; sourceTree = "<group>"; };
+		8E92A731278546690020B65B /* RxSwiftViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController2.swift; sourceTree = "<group>"; };
+		8E92A734278548580020B65B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		8E92A736278575AF0020B65B /* GithubSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSignupViewModel.swift; sourceTree = "<group>"; };
+		8E92A73B2785997A0020B65B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		8E92A73D27868F710020B65B /* DefaultImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultImplementations.swift; sourceTree = "<group>"; };
+		8E92A73F27868FCC0020B65B /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		8E92A741278690280020B65B /* String+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
+		8E92A743278697020020B65B /* BindingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		8EAB1326268EAA9E00DEB5B1 /* SwiftDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EAB132D268EAA9E00DEB5B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +236,7 @@
 		8EB660DE26AAA75A00EE506D /* GuessLikeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeCollectionCell.swift; sourceTree = "<group>"; };
 		8EC3171B2692B3B100DE462C /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		8EC317232692D22A00DE462C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		8EC8DE05278450ED00707BB6 /* RxSimpleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSimpleViewModel.swift; sourceTree = "<group>"; };
 		8ED6006326D4993D00B8140E /* SingleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleManager.swift; sourceTree = "<group>"; };
 		8EDBA51F26AE660C0094EB32 /* BookDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderView.swift; sourceTree = "<group>"; };
 		8EDBA52426AEB79C0094EB32 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -315,6 +333,8 @@
 		8E848F76269436BE00520E28 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8E92A733278548450020B65B /* Protocols */,
+				8EC8DE0427842E8B00707BB6 /* ViewModel */,
 				8EAB1369268EB06000DEB5B1 /* ViewControllers */,
 				8EAB138E268EB73300DEB5B1 /* Models */,
 				8EC3170F26929B2F00DE462C /* Views */,
@@ -347,6 +367,18 @@
 				8EE164CB269693F600F96808 /* SettingViewController.swift */,
 			);
 			path = My;
+			sourceTree = "<group>";
+		};
+		8E92A733278548450020B65B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E92A741278690280020B65B /* String+URL.swift */,
+				8E92A734278548580020B65B /* Protocols.swift */,
+				8E92A73D27868F710020B65B /* DefaultImplementations.swift */,
+				8E92A73F27868FCC0020B65B /* Wireframe.swift */,
+				8E92A743278697020020B65B /* BindingExtensions.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8EAB131D268EAA9E00DEB5B1 = {
@@ -425,6 +457,7 @@
 				8EE6B2C6274F2C2000E77A52 /* SwiftCharacterViewController.swift */,
 				8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */,
 				8EE3E4C7277B02E80087C2AC /* RxSwiftViewController.swift */,
+				8E92A731278546690020B65B /* RxSwiftViewController2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -526,8 +559,18 @@
 			children = (
 				8EE165282696EDD000F96808 /* TransCollectionCell.swift */,
 				8E742DED2755FB060062C219 /* CustomButton.swift */,
+				8E92A73B2785997A0020B65B /* ActivityIndicator.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EC8DE0427842E8B00707BB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EC8DE05278450ED00707BB6 /* RxSimpleViewModel.swift */,
+				8E92A736278575AF0020B65B /* GithubSignupViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8EDBA52926AFB7460094EB32 /* Read */ = {
@@ -817,6 +860,7 @@
 				8EAB1385268EB69D00DEB5B1 /* WeatherViewController.swift in Sources */,
 				8EDBA53026AFBB410094EB32 /* ReadTopBarView.swift in Sources */,
 				8EB660D526AA679700EE506D /* DescriptionTabCell.swift in Sources */,
+				8E92A74027868FCC0020B65B /* Wireframe.swift in Sources */,
 				8E742DEE2755FB060062C219 /* CustomButton.swift in Sources */,
 				8EE164DA2696A68E00F96808 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				8EB6604926A6B43E00EE506D /* ContentDetailViewController.swift in Sources */,
@@ -825,9 +869,11 @@
 				8EDBA52026AE660C0094EB32 /* BookDetailHeaderView.swift in Sources */,
 				8EB660DF26AAA75A00EE506D /* GuessLikeCollectionCell.swift in Sources */,
 				8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */,
+				8E92A744278697020020B65B /* BindingExtensions.swift in Sources */,
 				8EDBA52B26AFB76C0094EB32 /* ChapterReadViewController.swift in Sources */,
 				8E75BDEF26CF94C200F91E32 /* ReverseValueViewController.swift in Sources */,
 				8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */,
+				8E92A73E27868F710020B65B /* DefaultImplementations.swift in Sources */,
 				8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
 				8EDBA53526AFBC970094EB32 /* ReadBottomBarView.swift in Sources */,
@@ -840,8 +886,11 @@
 				8EE165292696EDD000F96808 /* TransCollectionCell.swift in Sources */,
 				8EAB1402268EEDD800DEB5B1 /* AudioViewController.swift in Sources */,
 				8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */,
+				8E92A737278575AF0020B65B /* GithubSignupViewModel.swift in Sources */,
+				8EC8DE06278450ED00707BB6 /* RxSimpleViewModel.swift in Sources */,
 				8E848F852694380300520E28 /* TabbarViewController.swift in Sources */,
 				8EE1648426955AB700F96808 /* Item.swift in Sources */,
+				8E92A735278548580020B65B /* Protocols.swift in Sources */,
 				8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */,
 				8EE1646526945E2B00F96808 /* MessageViewController.swift in Sources */,
 				8E848F9926943C6900520E28 /* MyViewController.swift in Sources */,
@@ -851,10 +900,12 @@
 				8EE1650D2696E84C00F96808 /* TransitionViewController.swift in Sources */,
 				8EC3171C2692B3B100DE462C /* StretchyViewController.swift in Sources */,
 				8E8958922774439C0038CE42 /* ClosureLearnViewController.swift in Sources */,
+				8E92A732278546690020B65B /* RxSwiftViewController2.swift in Sources */,
 				8EE165242696ED8600F96808 /* TransitionModel.swift in Sources */,
 				8EE164D126969FBC00F96808 /* MJNaviViewController.swift in Sources */,
 				8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */,
 				8EE1645D26945B5200F96808 /* API.swift in Sources */,
+				8E92A742278690280020B65B /* String+URL.swift in Sources */,
 				8EB6605326A6B47500EE506D /* ContentCommentViewController.swift in Sources */,
 				8EE164CC269693F600F96808 /* SettingViewController.swift in Sources */,
 				8EB6604E26A6B46400EE506D /* ContentChapterViewController.swift in Sources */,
@@ -865,6 +916,7 @@
 				8EE165332696F0DC00F96808 /* CustomPushTransition.swift in Sources */,
 				8EE6B2C7274F2C2000E77A52 /* SwiftCharacterViewController.swift in Sources */,
 				8EB660DA26AA92E000EE506D /* GuessLikeTabCell.swift in Sources */,
+				8E92A73C2785997A0020B65B /* ActivityIndicator.swift in Sources */,
 				8EDBA54326B12DDA0094EB32 /* ReadCollectionViewCell.swift in Sources */,
 				8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
