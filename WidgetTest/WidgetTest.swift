@@ -68,6 +68,10 @@ struct Provider: IntentTimelineProvider {
             completion(timeLine)
             
         }
+        
+        let userDefaults = UserDefaults(suiteName: "group.ydq.widget.test")
+        let appContent = userDefaults?.object(forKey: "widget") as? String
+        print(appContent ?? "--")
     }
 }
 
@@ -102,6 +106,9 @@ struct WidgetTestEntryView : View {
 //        }
 //    }
     
+    /// widgetURL：点击区域是Widget的所有区域，适合元素、逻辑简单的小部件  systemSmall只能用widgetURL实现URL传递接收
+    /// Link：通过Link修饰，允许让界面上不同元素产生点击响应  systemMedium、systemLarge可以用Link或者widgetUrl处理
+    
     var body: some View {
         ZStack{
             Image(uiImage: entry.poster.posterImage!)
@@ -115,7 +122,7 @@ struct WidgetTestEntryView : View {
                 .lineLimit(4)
                 .font(.system(size: 14))
                 .padding(.horizontal)
-        }
+        }.widgetURL(URL(string: "widget.url"))
     }
     
 }

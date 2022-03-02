@@ -185,6 +185,7 @@
 		8E73AB3727CDFE53002649E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E73AB3927CDFE53002649E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E73AB4327CE0888002649E1 /* SwiftDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDemos.entitlements; sourceTree = "<group>"; };
+		8E73AB4627CF39BE002649E1 /* WidgetTestExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetTestExtension.entitlements; sourceTree = "<group>"; };
 		8E742DED2755FB060062C219 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueViewController.swift; sourceTree = "<group>"; };
 		8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTwoViewController.swift; sourceTree = "<group>"; };
@@ -440,6 +441,7 @@
 		8EAB131D268EAA9E00DEB5B1 = {
 			isa = PBXGroup;
 			children = (
+				8E73AB4627CF39BE002649E1 /* WidgetTestExtension.entitlements */,
 				8EAB1328268EAA9E00DEB5B1 /* SwiftDemos */,
 				8EAB133F268EAAA000DEB5B1 /* SwiftDemosTests */,
 				8EAB134A268EAAA000DEB5B1 /* SwiftDemosUITests */,
@@ -1092,6 +1094,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = WidgetTestExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DL24X2CRR9;
@@ -1106,8 +1110,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ydq.qcloudparent.WidgetTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ydq.qcloudparent.widgetTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1121,6 +1126,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = WidgetTestExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DL24X2CRR9;
@@ -1135,8 +1142,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ydq.qcloudparent.WidgetTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ydq.qcloudparent.widgetTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

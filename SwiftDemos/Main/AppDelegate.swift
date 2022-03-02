@@ -62,6 +62,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        logoOpacityAnimation.delegate = self
 //        animationView.layer.add(logoOpacityAnimation, forKey: "opacityAnimation")
         
+        let userDefaults = UserDefaults(suiteName: "group.ydq.widget.test")
+        userDefaults?.set("123456", forKey: "widget")
+        userDefaults?.synchronize()
+        
         return true
     }
     
@@ -95,3 +99,11 @@ extension UIApplication {
     }
 }
 
+extension AppDelegate {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.description == "widget.url" {
+            print("---小组件点进来的")
+        }
+        return true
+    }
+}
