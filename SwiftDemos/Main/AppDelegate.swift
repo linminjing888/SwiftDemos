@@ -101,7 +101,9 @@ extension UIApplication {
 
 extension AppDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        if url.description == "widget.url" {
+        if url.description == "widget.image.url" {
+            print("点击了图片")
+        }else if url.description == "widget.url" {
             print("---小组件点进来的")
         }
         return true

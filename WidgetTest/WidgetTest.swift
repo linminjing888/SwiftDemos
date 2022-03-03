@@ -125,6 +125,65 @@ struct WidgetTestEntryView : View {
         }.widgetURL(URL(string: "widget.url"))
     }
     
+//    @Environment(\.colorScheme) var colorScheme  // 适配暗黑模式
+//    var bgColor : some View {
+//        colorScheme == .dark ? Color.black : Color.red
+////        `Color.red`
+//    }
+//    var body: some View {
+//        GeometryReader { geometry in
+//            ZStack {
+//                bgColor
+//
+//                VStack{
+//
+//                    Spacer().frame(height: 10)
+//
+//                    HStack{
+//                        Spacer().frame(width: 20)
+//                        Text("这是一个标题").foregroundColor(.white)
+//                        Link(destination: URL(string: "widget.image.url")!) {
+//                            Image("bg_default").frame(width: 25, height: 25).clipped()
+//                        }
+//                        Spacer()
+//                    }
+//                    Spacer()
+//
+//                    VStack(alignment: .leading, spacing: 10) {
+//                        Item()
+//                        Item()
+//                        Item()
+//                        Item()
+//                    }
+//                    Spacer()
+//                }
+//
+//            }.widgetURL(URL(string: "widget.url"))
+//        }
+//    }
+    
+}
+
+struct Item: View {
+    
+    var body: some View {
+        HStack(alignment: .center, spacing: 10) {
+            
+            Spacer().frame(width: 10)
+            Text("第1个Text")
+                .font(.system(size: 14))
+                .foregroundColor(.white)
+            Text("第2个Text")
+                .font(.system(size: 14))
+                .foregroundColor(.white)
+            Spacer()
+            Text("第3个Text")
+                .font(.system(size: 14))
+                .foregroundColor(.white)
+            Spacer().frame(width: 10)
+        }
+    }
+
 }
 
 /// @main 主入口
@@ -146,6 +205,7 @@ struct WidgetTest: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+//        .supportedFamilies([.systemMedium])
     }
 }
 
