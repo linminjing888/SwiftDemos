@@ -18,6 +18,7 @@
 		8E73AB3A27CDFE53002649E1 /* WidgetTest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8E73AB3627CDFE50002649E1 /* WidgetTest.intentdefinition */; };
 		8E73AB3B27CDFE53002649E1 /* WidgetTest.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8E73AB3627CDFE50002649E1 /* WidgetTest.intentdefinition */; };
 		8E73AB3E27CDFE53002649E1 /* WidgetTestExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8E73AB2E27CDFE4F002649E1 /* WidgetTestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8E73AB4827D1AD65002649E1 /* RxSwiftViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73AB4727D1AD65002649E1 /* RxSwiftViewController3.swift */; };
 		8E742DEE2755FB060062C219 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E742DED2755FB060062C219 /* CustomButton.swift */; };
 		8E75BDEF26CF94C200F91E32 /* ReverseValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */; };
 		8E75BDF426CF964B00F91E32 /* ReverseValueTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */; };
@@ -186,6 +187,7 @@
 		8E73AB3927CDFE53002649E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E73AB4327CE0888002649E1 /* SwiftDemos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDemos.entitlements; sourceTree = "<group>"; };
 		8E73AB4627CF39BE002649E1 /* WidgetTestExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetTestExtension.entitlements; sourceTree = "<group>"; };
+		8E73AB4727D1AD65002649E1 /* RxSwiftViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController3.swift; sourceTree = "<group>"; };
 		8E742DED2755FB060062C219 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		8E75BDEE26CF94C200F91E32 /* ReverseValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueViewController.swift; sourceTree = "<group>"; };
 		8E75BDF326CF964B00F91E32 /* ReverseValueTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseValueTwoViewController.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				8E8958912774439C0038CE42 /* ClosureLearnViewController.swift */,
 				8EE3E4C7277B02E80087C2AC /* RxSwiftViewController.swift */,
 				8E92A731278546690020B65B /* RxSwiftViewController2.swift */,
+				8E73AB4727D1AD65002649E1 /* RxSwiftViewController3.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -979,6 +982,7 @@
 				8EB6605826A7BEFD00EE506D /* ChapterCollectionCell.swift in Sources */,
 				8E92A73E27868F710020B65B /* DefaultImplementations.swift in Sources */,
 				8EDBA52526AEB79C0094EB32 /* UIViewExtension.swift in Sources */,
+				8E73AB4827D1AD65002649E1 /* RxSwiftViewController3.swift in Sources */,
 				8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */,
 				8EDBA53526AFBC970094EB32 /* ReadBottomBarView.swift in Sources */,
 				8EC317242692D22A00DE462C /* PickerViewController.swift in Sources */,

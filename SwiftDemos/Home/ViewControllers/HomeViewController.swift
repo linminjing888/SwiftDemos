@@ -92,7 +92,7 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         } else if indexPath.row == 10 {
 //            let vc = RxSwiftViewController()
 //            self.navigationController?.pushViewController(vc, animated: true)
-            let vc = RxSwiftViewController2()
+            let vc = RxSwiftViewController3()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
