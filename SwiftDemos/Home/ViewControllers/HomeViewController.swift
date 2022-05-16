@@ -18,7 +18,7 @@ class HomeViewController: MJBaseViewController {
         view.backgroundColor = .mainTextColor
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure","RxSwift"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure","RxSwift","DropDownMenu"]
         
         setupUI()
     }
@@ -93,6 +93,9 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
 //            let vc = RxSwiftViewController()
 //            self.navigationController?.pushViewController(vc, animated: true)
             let vc = RxSwiftViewController3()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 11 {
+            let vc = DropDownMenuViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
