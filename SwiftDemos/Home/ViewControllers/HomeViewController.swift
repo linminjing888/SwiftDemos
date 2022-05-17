@@ -18,7 +18,7 @@ class HomeViewController: MJBaseViewController {
         view.backgroundColor = .mainTextColor
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure","RxSwift","DropDownMenu"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure","RxSwift","DropDownMenu","Codable"]
         
         setupUI()
     }
@@ -97,7 +97,11 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         } else if indexPath.row == 11 {
             let vc = DropDownMenuViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.row == 12 {
+            let vc = CodableViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
+        
     }
     
     

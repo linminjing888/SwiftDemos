@@ -36,6 +36,8 @@
 		8E9590D3283244E10035BC12 /* DropDownMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9590D2283244E10035BC12 /* DropDownMenuViewController.swift */; };
 		8E9590D5283247660035BC12 /* DropMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9590D4283247660035BC12 /* DropMenuView.swift */; };
 		8E9590D728324ACB0035BC12 /* DropMenuViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9590D628324ACB0035BC12 /* DropMenuViewProtocol.swift */; };
+		8E9590D928333C330035BC12 /* CodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9590D828333C330035BC12 /* CodableViewController.swift */; };
+		8E9590DB283367470035BC12 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9590DA283367470035BC12 /* ProductModel.swift */; };
 		8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */; };
 		8EAB132E268EAA9E00DEB5B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB132D268EAA9E00DEB5B1 /* HomeViewController.swift */; };
 		8EAB1331268EAA9E00DEB5B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB132F268EAA9E00DEB5B1 /* Main.storyboard */; };
@@ -208,6 +210,8 @@
 		8E9590D2283244E10035BC12 /* DropDownMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuViewController.swift; sourceTree = "<group>"; };
 		8E9590D4283247660035BC12 /* DropMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropMenuView.swift; sourceTree = "<group>"; };
 		8E9590D628324ACB0035BC12 /* DropMenuViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropMenuViewProtocol.swift; sourceTree = "<group>"; };
+		8E9590D828333C330035BC12 /* CodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableViewController.swift; sourceTree = "<group>"; };
+		8E9590DA283367470035BC12 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		8EAB1326268EAA9E00DEB5B1 /* SwiftDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAB1329268EAA9E00DEB5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EAB132D268EAA9E00DEB5B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -529,6 +533,7 @@
 				8E92A731278546690020B65B /* RxSwiftViewController2.swift */,
 				8E73AB4727D1AD65002649E1 /* RxSwiftViewController3.swift */,
 				8E9590D2283244E10035BC12 /* DropDownMenuViewController.swift */,
+				8E9590D828333C330035BC12 /* CodableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				8EE165232696ED8600F96808 /* TransitionModel.swift */,
 				8EE165322696F0DC00F96808 /* CustomPushTransition.swift */,
 				8EE165522696F85600F96808 /* CustomPopTransition.swift */,
+				8E9590DA283367470035BC12 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1023,6 +1029,7 @@
 				8EE165242696ED8600F96808 /* TransitionModel.swift in Sources */,
 				8EE164D126969FBC00F96808 /* MJNaviViewController.swift in Sources */,
 				8EE165532696F85600F96808 /* CustomPopTransition.swift in Sources */,
+				8E9590D928333C330035BC12 /* CodableViewController.swift in Sources */,
 				8EE1645D26945B5200F96808 /* API.swift in Sources */,
 				8E92A742278690280020B65B /* String+URL.swift in Sources */,
 				8EB6605326A6B47500EE506D /* ContentCommentViewController.swift in Sources */,
@@ -1037,6 +1044,7 @@
 				8EE6B2C7274F2C2000E77A52 /* SwiftCharacterViewController.swift in Sources */,
 				8EB660DA26AA92E000EE506D /* GuessLikeTabCell.swift in Sources */,
 				8E92A73C2785997A0020B65B /* ActivityIndicator.swift in Sources */,
+				8E9590DB283367470035BC12 /* ProductModel.swift in Sources */,
 				8EDBA54326B12DDA0094EB32 /* ReadCollectionViewCell.swift in Sources */,
 				8EB6603726A6A1EE00EE506D /* MJPageViewController.swift in Sources */,
 				8EE164C72695A75A00F96808 /* MyHeaderView.swift in Sources */,
