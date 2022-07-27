@@ -18,7 +18,7 @@ class HomeViewController: MJBaseViewController {
         view.backgroundColor = .mainTextColor
         self.title = "首页"
         
-        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure","RxSwift","DropDownMenu","Codable"]
+        dataArray = ["Font","Weacher","TextView","Audio","Stretchy","Picker","Transition","ReverseValue","Swift特性","Closure","RxSwift","DropDownMenu","Codable","Prefix"]
         
         setupUI()
     }
@@ -31,6 +31,14 @@ class HomeViewController: MJBaseViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.left.right.top.equalToSuperview()
+            if #available(iOS 11.0, *) {
+                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            } else {
+                make.bottom.equalToSuperview()
+            }
+        }
         
     }
 
@@ -99,6 +107,9 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.row == 12 {
             let vc = CodableViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.row == 13 {
+            let vc = PrefixVC()
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BD53DC9F797F407B9FFDF7E /* Pods_SwiftDemos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B21FBEC0BA395A73D546D11 /* Pods_SwiftDemos.framework */; };
+		8E11724B288FD9F7006BBB5A /* PrefixVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11724A288FD9F7006BBB5A /* PrefixVC.swift */; };
 		8E228C1A269C19C30012BF18 /* MJAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C19269C19C30012BF18 /* MJAPI.swift */; };
 		8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C20269C36D90012BF18 /* BookDetailViewController.swift */; };
 		8E228C26269C37BF0012BF18 /* DetailStaticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */; };
@@ -180,6 +181,7 @@
 		03D4E653F6616F7AEC4B0F1D /* Pods-SwiftDemos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemos.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemos/Pods-SwiftDemos.release.xcconfig"; sourceTree = "<group>"; };
 		3B80AD907111B124C97B6BA3 /* Pods-SwiftDemos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemos.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemos/Pods-SwiftDemos.debug.xcconfig"; sourceTree = "<group>"; };
 		5B21FBEC0BA395A73D546D11 /* Pods_SwiftDemos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E11724A288FD9F7006BBB5A /* PrefixVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixVC.swift; sourceTree = "<group>"; };
 		8E228C19269C19C30012BF18 /* MJAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJAPI.swift; sourceTree = "<group>"; };
 		8E228C20269C36D90012BF18 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		8E228C25269C37BF0012BF18 /* DetailStaticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStaticModel.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 				8E73AB4727D1AD65002649E1 /* RxSwiftViewController3.swift */,
 				8E9590D2283244E10035BC12 /* DropDownMenuViewController.swift */,
 				8E9590D828333C330035BC12 /* CodableViewController.swift */,
+				8E11724A288FD9F7006BBB5A /* PrefixVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				8EAB132A268EAA9E00DEB5B1 /* AppDelegate.swift in Sources */,
 				8EAB13F6268EE0C700DEB5B1 /* TextInputViewController.swift in Sources */,
 				8EE164AA26958D5F00F96808 /* UIColorExtension.swift in Sources */,
+				8E11724B288FD9F7006BBB5A /* PrefixVC.swift in Sources */,
 				8EE165292696EDD000F96808 /* TransCollectionCell.swift in Sources */,
 				8EAB1402268EEDD800DEB5B1 /* AudioViewController.swift in Sources */,
 				8E228C21269C36D90012BF18 /* BookDetailViewController.swift in Sources */,
