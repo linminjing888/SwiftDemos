@@ -9,6 +9,7 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+// 时间线刷新策略控制
 struct Provider: IntentTimelineProvider {
     
     /// 占位视图 placeholder：提供一个默认的视图，例如网络请求失败、发生未知错误、第一次展示小组件都会展示这个view
@@ -25,7 +26,11 @@ struct Provider: IntentTimelineProvider {
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
 //        let entry = SimpleEntry(date: Date(), configuration: configuration)
         
-        let poster = Poster(author: "Lin", content: "一段文字")
+        let userDefaults = UserDefaults(suiteName: "group.CBD.com")
+        let appContent = userDefaults?.object(forKey: "widget") as? String
+        print(appContent ?? "--")
+        
+        let poster = Poster(author: "Lin", content: appContent ?? "")
         let entry = SimpleEntry(date: Date(), poster: poster)
         completion(entry)
     }
@@ -69,7 +74,8 @@ struct Provider: IntentTimelineProvider {
             
         }
         
-        let userDefaults = UserDefaults(suiteName: "group.ydq.widget.test")
+        // App Groups 数据通信/数据共享
+        let userDefaults = UserDefaults(suiteName: "B96GMBJW7F.group.CBD.com")
         let appContent = userDefaults?.object(forKey: "widget") as? String
         print(appContent ?? "--")
     }
@@ -133,7 +139,6 @@ struct WidgetTestEntryView : View {
 //    var body: some View {
 //        GeometryReader { geometry in
 //            ZStack {
-//                bgColor
 //
 //                VStack{
 //
@@ -141,7 +146,8 @@ struct WidgetTestEntryView : View {
 //
 //                    HStack{
 //                        Spacer().frame(width: 20)
-//                        Text("这是一个标题").foregroundColor(.white)
+//                        Text("这是一个标题").foregroundColor(.black)
+//                        // 局部跳转
 //                        Link(destination: URL(string: "widget.image.url")!) {
 //                            Image("bg_default").frame(width: 25, height: 25).clipped()
 //                        }
@@ -172,21 +178,21 @@ struct Item: View {
             Spacer().frame(width: 10)
             Text("第1个Text")
                 .font(.system(size: 14))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
             Text("第2个Text")
                 .font(.system(size: 14))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
             Spacer()
             Text("第3个Text")
                 .font(.system(size: 14))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
             Spacer().frame(width: 10)
         }
     }
 
 }
 
-/// @main 主入口
+// @main 主入口
 @main
 struct WidgetTest: Widget {
     let kind: String = "WidgetTest"
@@ -214,7 +220,7 @@ struct WidgetTest_Previews: PreviewProvider {
         
         let poster = Poster(author: "Lin", content: "一段文字")
         WidgetTestEntryView(entry: SimpleEntry(date: Date(), poster: poster))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
 

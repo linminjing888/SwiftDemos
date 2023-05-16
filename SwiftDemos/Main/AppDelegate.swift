@@ -62,7 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        logoOpacityAnimation.delegate = self
 //        animationView.layer.add(logoOpacityAnimation, forKey: "opacityAnimation")
         
-        let userDefaults = UserDefaults(suiteName: "group.ydq.widget.test")
+        // App Groups 数据通信/数据共享
+        let userDefaults = UserDefaults(suiteName: "group.CBD.com")
         userDefaults?.set("123456", forKey: "widget")
         userDefaults?.synchronize()
         
